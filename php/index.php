@@ -25,8 +25,6 @@
  include ("inc/cookie.inc.php"); cookieinclude ("accueilprincipal");
 ?>
  
-<div style="box-shadow: 0 3px 10px grey;position:relative;height:200px; width:50%;">
-<img class="anime" src="../images/mysteres/boule.jpg"/></div>
 
 	
 </header>
