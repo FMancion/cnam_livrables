@@ -18,17 +18,13 @@
 
 <div id="conteneur">
 
-
 <header>  
 <?php
  include ("inc/header.inc.php"); headerinclude ("accueil principal");
  include ("inc/cookie.inc.php"); cookieinclude ("accueilprincipal");
 ?>
- 
-
 	
 </header>
-
 <nav>
 <a href ="./index.php"> <img src="../images/cube_fou.jpg" width="20%" align="left" ></a>
 <ul id="menu">
