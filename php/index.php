@@ -14,7 +14,6 @@
 </head>
 	
 <body>
-
 <div id="conteneur">
 
 <header>  
@@ -22,8 +21,18 @@
  include ("inc/header.inc.php"); headerinclude ("accueil principal");
  include ("inc/cookie.inc.php"); cookieinclude ("accueilprincipal");
 ?>
-	
+
+<!-- banniere defilante en html -->
+<marquee scrollamount="5" direction="left" onmouseover="this.stop()" onmouseout="this.start()">&nbsp;
+<IMG src="../images/mysteres/swnewyork.jpg" height="200px">
+<IMG src="../images/mysteres/rocher.jpg"height="200px">
+<IMG src="../images/mysteres/boule.jpg"height="200px">
+</MARQUEE>
+
+
 </header>
+
+
 <nav>
 <a href ="./index.php"> <img src="../images/cube_fou.jpg" width="20%" align="left" ></a>
 <ul id="menu">
