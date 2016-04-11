@@ -1,39 +1,11 @@
 
 
-/*============================block user login==================*/
-
-#logo
-{
-	width:20px;
-		margin-LEFT: 20px;
-				margin-top: 20px;
-
-		float:left;
-
-	
-}
-
-/*============================block user login==================*/
-
-#block-user-login
-{
-	float:right;
-	margin-right: 40px;
-	margin-left: 40px;
-	width:180px;
-    border-radius: 20px;
-    padding:0px 10px 10px 10px; 
-    border: 2px solid green;
-    text-align: center ;
-    background-color:#FFFACD;
-}
-
 /*============================  banniere defilante ==================*/
 
  #slideshow {
   background-repeat:no-repeat;
   background-position:center center;
-  width: 590px;
+  width: 636px;
   height: 282px;
   display: block;
   float: left;
@@ -45,7 +17,7 @@
   margin-bottom: 20px;
  }
  .vueS{
-  width: 100%;
+  width: 85%;
   height: 282px;
   display:block;
   background-position:center center;
@@ -100,8 +72,18 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
  }
-   /*=====================  image en haut differente a chaque page  ================*/
 
+  /*========================   conteneur =================*/
+
+  #conteneur
+{
+    max-width: 95%;
+    margin: 0 auto ;
+    text-align: center ;
+    border: 2px solid #ab4 ;
+    background-image: url(../images/mysteres/lignes_nazca.jpg)  ;
+
+}
   #imageenhaut
 {
 	margin-top: 5%;
@@ -109,29 +91,13 @@
     max-width: 95%;
 }
 
-  /*========================   conteneur =================*/
+/*=================================debut test media querie pour site responsive===================*/
 
-  #conteneur
-{
-    max-width: 900px;
-    margin: 0 auto ;
-    text-align: center ;
-    border: 2px solid #ab4 ;
-    background-color: #F5FFFA;
-	background-image: url(../images/mysteres/lignes_nazca.jpg)  ;
-}
-/*============================================================= php =========================================*/
-
- *.myphp{
- color: green;
- font-size: 21px;
-}
-/*================================================debut test media querie pour site responsive=========================================*/
 @media (min-width: 992px) and (max-width: 2000px) {
     body {
 		background-color: #dea ;
     }
-	#article
+	#article,#section
 	{
 	font-size: 14px;
 	font-family: Verdana,Arial,Geneva,sans-serif;
@@ -172,6 +138,34 @@
 	width: 50%;
 	height: auto;
 	}
+	form 
+	{
+	background-color:#FAFAFA;
+	padding:10px;
+	}
+	fieldset 
+	{
+	padding:0 20px 20px 20px;
+	margin-bottom:8px;
+	border:1px solid #14DC7F;
+	margin: 0 auto; 
+	}
+	legend 
+	{
+	color:#14DC7F;
+	font-weight:bold;
+	text-align:center;
+	}
+	label 
+	{
+	margin-top:5px;
+	display:block;
+	}
+	label.inline 
+	{
+	display:inline;
+	margin-right:50px; 
+	}
 }
 @media only screen and (max-width: 320px) {
     body {
@@ -181,31 +175,38 @@
 /*=========================================================debut navigation================================================*/
 nav
 {
-  margin-left: 10px;
+position: relative;
+  margin-top: 3%;
+  margin-left: 	3%;
   border-radius: 20px;
   float: left;
-  width: 130px;
-  height:auto;
+  width: 20%;
   border: 2px solid green;
-  background-color: #CCFFFF;
+  background-color: #FFE4C4;
+  vertical-align:middle;
 }
-#menu {
-  padding:40px 40px 40px 10px; 
-  text-align: center;
+#nav menu {
+	width: 10%;
+ position: absolute;
+ padding:20px 20px 20px 20px; 
+ margin:   0px;
+ text-align: center;
 }
 #menu li {
-	display: inline;
+		width: 10%;
+
 	list-style: none;
 }
 #menu a {
-	display:block;
+	width: 10%;
+	display:inline-block;
 	margin: 0 10px;
-	min-width: 	90px;
+	min-width: 	85px;
 	text-decoration: none;
 	color: black;
 	border:3px solid #336600;/*couleur vert fonce*/
 	border-radius: 10px 0px 10px 0px;
-	/* background-image:linear-gradient(white, #8a0); */
+	background-image:linear-gradient(white, #8a0);
 	text-align: center;
 	line-height: 30px;
 	font-family: verdana;
@@ -227,58 +228,74 @@ nav
 	border-radius: 10px 0px 10px 0px;
 	color:white;
 }
+
 /*==========================================================debut pages html ===========================================================*/
 header
-{   
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+{
+	margin-top: 5%;
     border-radius: 20px;
+    border: 3px solid green;
+    background-color:#FFE4C4 ;
+	width:50%;
+	height:10% ;
+    display: inline-block;
+	vertical-align:middle;
+	vertical-text-align: center ;
+}
+
+#block-user-login
+{
+	margin-top: 3%;
+    margin-right: 3%;
+    border-radius: 20px;
+	float: right;
+    padding:20px 20px 20px 20px; 
+    border: 2px solid green;
+    background-color:#FFE4C4;
+	display: block;
+	width:200px;
+	height:1	50px;
+}
+aside
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding:20px 20px 20px 20px; 
     border: 2px solid green;
     text-align: center ;
-    background-color:#888888  ;
-    height: 400px ;
-    display: block;
-
+    background-color:#FFFACD;
+	display: block;
+	width:auto;
+	
 }
 
 section
 {
-    margin-left: 170px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
     border-radius: 20px;
     border: 2px solid green;
     text-align: center ;
-    background-color:#ADD8E6;
-	
-}
-aside
-{
-	height:auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-	margin-bottom: 20px;
-    border-radius: 20px;
-    padding:20px 20px 20px 20px; 
-    border: 2px solid green;
-    background-color:#FFFACD;
+    background-color:#ADD8E6 ;
 	display: block;
-	line-height:10px;
+	width:auto;
+	height: auto ;
 }
 article
 { 
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
     border-radius: 20px;
-    padding:20px 20px 20px 20px; 
     border: 2px solid green;
     text-align: center ;
     background-color:#FFFACD;
+	display:block;
+	width:auto;
 }
 
 article img
@@ -313,44 +330,46 @@ article img
 	margin: 0 auto; 
 	display:block;
 }
- h1
+ p  
 {
     padding: 0 0 0 -100px ;
+	font-size : auto ; 
+	text-align: center;
 }
 
-h2
+ h1  /*titres principaux*/ 
 {
-  font-family:Verdana,Arial,Geneva,sans-serif;
-  font-Size: 18px;
-  color :#9b2; /*couleur verte*/
-  text-align: center;
-  line-height: 25px ;
+    padding: 0 0 0 -100px ;
+	font-size : 20px ; 
+	font-family:Verdana,Arial,Geneva,sans-serif;
+	color :#9b2;/*couleur verte*/
+	text-align: center;
+}
+
+h2    /*titres secondaires*/
+{
+  text-align:center;
   padding-left: 10px;
-  font-size: 1.4em ;
-  color: #9b2 ;
+  background: url(../images/shadow-illusion-little.png) no-repeat left bottom ;
   border-bottom: 1px solid #9b2 ;
-	}
-	
-h3
-{
-    margin-left: 15px ;
-    border-bottom: 1px solid #9b2 ;
-    border-left: 3px solid #9b2 ;
-    color: #9b2 ;
+  font-family:Verdana,Arial,Geneva,sans-serif;
+  font-Size: 18px;	
+  color :#9b2;/*couleur verte*/
 }
-h4
+h3    /*titres secondaires*/
 {
-	  text-align: center;
-
-  font-Size: 16px;
-      color: #9b2 ;
-
+  text-align:center;
+  line-height: 15px ;
+  padding-left: 10px;
+  font-family:Verdana,Arial,Geneva,sans-serif;
+  font-Size: 18px;	
+  color :#9b2;/*couleur verte*/
+ 
 }
-
 
 section p
 {
-    text-align: justify ;
+    /* text-align: justify ; */
     text-indent: 2em ;
     line-height: 3.7em ;
 }
@@ -368,13 +387,7 @@ section a:hover
 	background-image:linear-gradient(white, #99ff66);
 
 }
-h1/*titres principaux*/
-{
-	font-size : 20px ; 
-	font-family:Verdana,Arial,Geneva,sans-serif;
-	color :#9b2;/*couleur verte*/
-	text-align: center;
-}
+
 /*============================================================= infobulle =========================================*/
 
 #infobulle
@@ -383,28 +396,13 @@ color: green ;
 font-size: 14pt ;
 }
 
-/*============================================================debut page contact=====================================================*/
-	fieldset 
-	{
-	padding:0 20px 20px 20px;
-	margin-bottom:8px;
-	border:1px solid #14DC7F;
-	max-width:25%;
-	margin: 0 auto; 
-	}
-	legend 
-	{
-    font-size:30px;
-	color:#14DC7F;
-	font-weight:bold;
-	text-align:center;
-	}
+/*=========================================  page contact=====================================================*/
 
 form 
 {
 	background-color:#FAFAFA;
+	width:auto;
 	padding:10px;
-	max-width:120%;
  }
   label 
 {
@@ -467,7 +465,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     border-radius: 10px 10px 10px 10px;
 
 }
-/*===============================================================debut pied de page===================================================================*/
+/*=============================    pied de page  ==================================================*/
 footer
 {
 	font-family: Arial;
@@ -475,7 +473,7 @@ footer
 	font-size:24px;
 	color:#336600;
 	background-image:linear-gradient(white, #8a0);
-	max-height:auto;
+	max-height:130px0px;
 }
 footer a
 {
@@ -486,14 +484,41 @@ footer a
 	display:block;
 	text-align:center;
 }
-
-
-/*============================ debut geolocalisation===================================================================*/
+/*menu survol*/
+ a:hover
+{
+	border:3px solid #99ff00;/*couleur vert clair*/
+	border-radius: 10px 0px 10px 0px;
+	background-image:linear-gradient(white, #99ff66);
+}
+/*=============================================================== debut geolocalisation===================================================================*/
 #carte_js{height: 300px; }
-/*=============================== FIN CSS  ====================================================*/
+/*=============================================================== debut CAPTCHA JQUERY===================================================================*/
 
-
-
-
-
+.rand1, .rand2
+{
+padding: 16px;
+background-color: #ADDB4B;
+margin: 25px 0;
+float: left;
+border-radius: 49px;
+}
+.plus
+{
+padding: 16px 0;
+margin: 25px 7px;
+float: left;
+}
+.re
+{
+	padding:8px;
+	background-color:#D8A217;
+	margin:35px;
+	float:left;	cursor:pointer;
+	box-shadow: 2px 2px 2px 1px #818181;
+	-moz-box-shadow: 2px 2px 2px 1px #818181;
+	-webkit-box-shadow: 2px 2px 2px 1px #818181;
+	-ms-box-shadow: 2px 2px 2px 1px #818181;
+	-o-box-shadow: 2px 2px 2px 1px #818181;
+}
 
