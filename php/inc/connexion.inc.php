@@ -4,7 +4,6 @@
 // fonction 1 --- applique juste une requete dans la base
 
 function requetebdd($requete) { 
-
   /* Declaration des variables de connexion a la BDD  */
   
 if ( $_SERVER['HTTP_HOST'] == 'localhost' ) { 
@@ -13,20 +12,21 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
 } 
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) { 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u128572442_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u128572442_myst' ;
-}
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) { 
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u353141068_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u353141068_myst' ;
-}
+  }
 
-
+  
   /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
   // on se connecte à MySQL 
   // on sélectionne la base 
@@ -70,18 +70,19 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
 } 
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) { 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u128572442_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u128572442_myst' ;
-}
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) { 
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u353141068_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u353141068_myst' ;
-}
+  }
   
   /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
   $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
@@ -114,18 +115,19 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
 } 
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) { 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u128572442_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u128572442_myst' ;
-}
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) { 
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u353141068_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u353141068_myst' ;
-}
+  }
   
   /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
   $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
@@ -164,19 +166,20 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
 } 
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) { 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u128572442_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u128572442_myst' ;
-}
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) { 
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u353141068_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u353141068_myst' ;
-}
-
+  }
+  
   /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
   $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
   or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
@@ -203,7 +206,6 @@ echo "</TABLE> ";
 // fonction 5 --- extrait donnees dans un fichier .csv
 
 function ExtraireMessCSV($requete) { 
-
     /* Declaration des variables de connexion a la BDD  */
 	
 if ( $_SERVER['HTTP_HOST'] == 'localhost' ) { 
@@ -212,18 +214,19 @@ if ( $_SERVER['HTTP_HOST'] == 'localhost' ) {
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
 } 
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) { 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u128572442_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u128572442_myst' ;
-}
-if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) { 
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $serveur='mysql.hostinger.fr' ;
   $loginserveur='u353141068_myst' ;
   $mdpserveur='dragon18' ;
   $nombdd='u353141068_myst' ;
-}
+  }
   
   /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
   $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 

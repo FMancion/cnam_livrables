@@ -7,12 +7,12 @@ if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
 
 	// On teste pour voir si nos variables ont bien été enregistrées
 	
-	echo 'Votre login : '.$_SESSION['login'].' ' ;
-	echo 'votre password : '.$_SESSION['pwd'].'.';
-	echo 'votre type de compte : '.$_SESSION['typecpte'].'.';
-	//echo 'Votre typeCpte : '.$_SESSION['typeCpte'].' ' ;
+	echo 'Votre login : '.$_SESSION['login'].' <br>' ;
+	echo 'votre password : '.$_SESSION['pwd'].'<br>';
+	echo 'votre type de compte : '.$_SESSION['typecpte'].'<br></br>';
+	echo '<a href="./logout.php"><input type="button" name="logout" value="déconnection"/></a>' ;
 }
 else {
-	echo 'Vos variables de session ne sont pas déclarées.';
+	echo 'Les variables de session ne sont pas déclarées.';
 }
 ?>

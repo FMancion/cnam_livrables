@@ -1,4 +1,4 @@
-
+<br />
 <?php
 
 function cookieinclude ($param) { 
@@ -13,7 +13,7 @@ $expire = 365*24*3600; // on définit la durée du cookie, 1 an
 
 if (isset($_COOKIE[$param])) {
 	echo " message cookie : tiens tiens ... vous revoila sur la page $param .." ; 
-   echo 'Votre contenu de cooki existant est : '.$_COOKIE["$param"].' ' ;
+   echo 'Votre cooki s\'appelle : '.$_COOKIE["$param"].' ' ;
 
 } else {
    setcookie("$param","mystillus_page$param",(time()+$expire));
