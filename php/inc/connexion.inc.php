@@ -29,15 +29,18 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
   // on se connecte à MySQL 
   // on sélectionne la base 
+  
   $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
   or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
   $con->set_charset('utf8');
+  
   mysqli_select_db($con,$nombdd) 
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
+  
   // on crée les requête SQL 
   //$requete2 = " SELECT nom,texte FROM message" ; 
   // on envoie les requêtes 
-  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  ;
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error()); 
   //$resultat2 = mysqli_query($con,$requete2) or die('Erreur SQL !<br>'.$requete2.'<br>'.mysqli_error()); ;
   //$resultat3=mysqli_num_rows($resultat2);
   
@@ -90,7 +93,7 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   mysqli_select_db($con,$nombdd) 
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
-  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  ;
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
   
 	$resultat2=mysqli_num_rows($resultat1);
   //$resultat2=mysqli_fetch_field($resultat1);
@@ -135,7 +138,7 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   mysqli_select_db($con,$nombdd) 
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
-  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  ;
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
   $resultat2=mysqli_num_rows($resultat1);
   
    //echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
@@ -186,7 +189,7 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   mysqli_select_db($con,$nombdd) 
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
-  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  ;
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
   $resultat2=mysqli_num_rows($resultat1);  
    echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
    
@@ -304,7 +307,7 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   mysqli_select_db($con,$nombdd) 
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
-  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  ;
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
   $resultat2=mysqli_num_rows($resultat1);  
    echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
    
@@ -322,19 +325,34 @@ echo "</TABLE> ";
 // ---------- fonction 7 ----------extrait donnees base dans fichier csv  ------------------
 
 
-function WriteCsv() {
+function WriteCsv ($requete) {
 
-// configuration de la base de données base de données
-$serveur=$_SERVER['HTTP_HOST'] ;
+// configuration de la base de données 
+  $serveur=$_SERVER['HTTP_HOST'] ;
   $loginserveur='root' ;
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
+
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u128572442_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u128572442_myst' ;
+  }
   
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'u128572442_myst';
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u353141068_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u353141068_myst' ;
+  }
+  
+$host = $serveur ;
+$user = $loginserveur ;
+$pass = $mdpserveur ;
+$db = $nombdd ;
 $nom_fichier = 'export_messages.csv';
+
 
 //format du CSV
 $csv_terminated = "\n";
@@ -342,21 +360,24 @@ $csv_separator = ";";
 $csv_enclosed = '"';
 $csv_escaped = "\\";
 
-// requête MySQL
-$sql_query = "SELECT * FROM message";
-
 // connexion à la base de données
-$link = mysql_connect($host, $user, $pass) or die("Je ne peux me connecter." . mysql_error());
-mysql_select_db($db) or die("Je ne peux me connecter.");
+
+  $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur)
+     or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
+  $con->set_charset('utf8');
+  
+  mysqli_select_db($con,$nombdd) 
+  or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
+
 
 // exécute la commande
-$result = mysql_query($sql_query);
-$fields_cnt = mysql_num_fields($result);
+//$result = mysqli_query($requete);
+$result = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error()); 
+$fields_cnt = mysqli_num_fields($result);
 
 $schema_insert = '';
 
-for ($i = 0; $i < $fields_cnt; $i++)
-{
+for ($i = 0; $i < $fields_cnt; $i++) {
     $l = $csv_enclosed . str_replace($csv_enclosed, $csv_escaped . $csv_enclosed,
     stripslashes(mysql_field_name($result, $i))) . $csv_enclosed;
     $schema_insert .= $l;
@@ -367,7 +388,7 @@ $out = trim(substr($schema_insert, 0, -1));
 $out .= $csv_terminated;
 
 // Format des données
-while ($row = mysql_fetch_array($result))
+while ($row = mysqli_fetch_array($result))
 {
     $schema_insert = '';
     for ($j = 0; $j < $fields_cnt; $j++)
@@ -399,13 +420,11 @@ if ($j < $fields_cnt - 1)
 } // fin while
 
 // Envoie au fureteur pour le téléchargement
-//header_remove('x-powered-by');
 header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 header("Content-Length: " . strlen($out));
+//header("Content-Type: text/plain");
 header("Content-type: text/x-csv");
-
 header("Content-Disposition: attachment; filename=" . $nom_fichier);
-
 echo $out;
 exit;
 }

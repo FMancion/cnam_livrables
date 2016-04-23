@@ -8,6 +8,7 @@
 
  $login=$_GET['login'];
  $pwd=$_GET['pwd'];
+ 
  $regex_pass="#^(?=.*\d)(?=.*[a-zA-Z]).{4,8}#" ;
  $regex_nom="#[a-zA-Z0-9]#" ;
  
@@ -32,7 +33,7 @@ if (isset($_GET['login']) && isset($_GET['pwd'])) {
 		if ( $nblignesadmin >= 1 ) {
     // on enregistre les paramètres de notre visiteur comme variables de session 
 			  
-		  $_SESSION['login'] = $_GET['login'];
+		  $_SESSION['login'] = $_GET['login'];	
 		  $_SESSION['pwd'] = $_GET['pwd'];
 		  $_SESSION['typecpte'] = "Administrateur";
 		  header ('location: ./index_admin.php');

@@ -325,7 +325,7 @@ echo "</TABLE> ";
 function WriteCsv() {
 
 // configuration de la base de données base de données
-$serveur=$_SERVER['HTTP_HOST'] ;
+  $serveur=$_SERVER['HTTP_HOST'] ;
   $loginserveur='root' ;
   $mdpserveur='' ;
   $nombdd='u128572442_myst' ;
@@ -402,6 +402,7 @@ if ($j < $fields_cnt - 1)
 header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
 header("Content-Length: " . strlen($out));
 header("Content-type: text/x-csv");
+//header("Content-Type: text/plain");
 header("Content-Disposition: attachment; filename=" . $nom_fichier);
 echo $out;
 exit;

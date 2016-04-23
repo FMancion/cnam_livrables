@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -14,7 +16,7 @@
 	<link rel="shortcut icon" href="../img/favicon.ico" />
   </head>
   
-<body> ;
+<body>
  <div id="conteneur">  
  
 <article>

@@ -23,9 +23,10 @@
 
 <?php 
 /* declaration des variables */
- $requete = " SELECT  nom,texte FROM  message " ; 
- //require("inc/connexion.inc.php"); ExtraireMessCSV($requete) ;
-  require("inc/connexion.inc.php"); WriteCsv($requete) ;
+  $requete = " SELECT  nom,texte FROM  message " ; 
+ //$requete = " SELECT  * FROM  message " ; 
+  require("inc/connexion.inc.php"); ExtraireMessCSV($requete) ;
+  //require("inc/connexion.inc.php"); WriteCsv ($requete) ;
 ?>     
 ?>     
       <p> ma requete de selection : <br/> "<?php echo $requete; ?>" </p> 
