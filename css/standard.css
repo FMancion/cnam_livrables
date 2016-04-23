@@ -1,52 +1,357 @@
+﻿	
+
+/*======================== test media querie pour site responsive=======================*/
+
+/* ==================================== FOR PC ========================================*/
+
+@media (min-width: 1024px) and (max-width: 2000px) {
+    body {
+	background-color: black ;
+    }
+	article {
+	margin: 3% 18% 3% 18%; /* top right bottom left */
+	}
+	footer {
+	font-size:24px;
+	}
+	footer a {
+	font-size:18px;
+	}
+	fieldset{
+	 margin : 5% 5% 5% 5%; /* top right bottom left */
+	 width:60%;
+		
+	}
+	input[type=password],input[type=text],input[type=email]{
+	width:50%;
+    }
+	input[type=submit], input[type=reset] ,input[type=impression] {
+		width:40%;
+	}
+	input[type=button] {
+		width:60%;
+	}
+	#menu {
+    padding:20px 20px 20px 20px;  /* top right bottom left */
+	}
+	#menu a{
+	 font-size: 14px;
+	}
+	h3{
+     margin-left: 14% ;
+     font-Size: 16px;
+     width:80%;
+	}
+	#conteneur{
+	  margin: 2% 10% 10% 10% ; /* top right bottom left */
+	}
+	#imageenhaut{
+	  height: 250px;
+	}
+	 #slideshow {
+	  height: 250px;
+	 }
+	  .vueS{
+	  height: 280px;
+	  }
+	#navigationMenu {
+	display:none;
+}
+	nav{
+    float: left;
+	margin : 2% 16% 20% 2% ; /* top right bottom left */
+  	border: 3px solid green;
+    border-radius: 20px;
+    width: 16%;
+    background-color: black;
+}
+	aside
+{
+	padding :10px 10px 10px 10px ;
+	font-size:16px;
+	float:right;
+	margin-top: 2%;
+	margin-right: 5%;
+	width:20%;
+}
+
+	#block-user-login {
+	padding:10px 10px 10px 10px ;
+	font-size:16px;	
+	float:right;
+	margin-top: 2%;
+	margin-right: 5%;
+	width:20%;
+    }
+	#block-user-login  h1{
+	 font-Size:16px;
+	}
+	
+	h1 /*titres principaux*/
+{
+	font-size : 18px ; 
+}
+    h2 { /*titres secondaires*/
+    font-Size: 16px;
+	}
+
+	section{
+	margin: 400px 2% 5% 20% ; /* top right bottom left */
+	}
+	header{
+      width:65%;	
+	}
+	legend{
+	  font-size:18px;
+	}
+
+}
+    /* ====================  For tablettes : ========================= */
+
+@media (min-width: 561px) and (max-width: 1023px) {
+    body {
+     background-color:darkgrey;
+    }
+	article {
+	margin: 3% 18% 3% 18%; /* top right bottom left */
+	}
+
+	footer {
+	font-size:20px;
+	}
+	footer a {
+	font-size:14px;
+	}
+
+	fieldset{
+	 margin : 5% 5% 5% 5%; /* top right bottom left */
+	 width:60%;
+	}
+    input[type=password],input[type=text],input[type=email]{
+	width:50%;
+    }
+	input[type=submit], input[type=reset] ,input[type=impression] {
+		width:60%;
+	}
+	input[type=button] {
+		width:75%;
+	}
+	
+	#menu {
+	padding:20px 16px 20px 16px;  /* top right bottom left */
+	}
+	
+	#menu a{
+	 font-size: 10px;
+	}
+
+	h3{
+     margin-left: 0% 0% 0% 0% ; /* top right bottom left */
+     font-Size: 10px;
+     width:100%;
+	}
+
+		#conteneur{
+	  margin: 2% 5% 10% 5% ; /* top right bottom left */
+	}
+		#imageenhaut{
+	  height: 150px;
+	}
+		#slideshow {
+		   height: 150px;
+	 }
+	 	 .vueS{
+	  height: 280px;
+	  }
+
+	#navigationMenu {
+	display:none;
+}
+	nav{
+    float: left;
+    margin : 2% 20% 30% 2% ; /* top right bottom left */  
+	border: 3px solid green;
+    border-radius: 20px;
+    width: 15%;
+    background-color: black;
+}
+	aside
+{
+	padding :10px 10px 10px 10px ;
+	font-size:12px;
+	float:right;
+	margin-top: 1%;
+	margin-right: 2%;
+	width:20%;
+}
+
+	#block-user-login  {
+	padding:10px 10px 10px 10px ;
+	font-size:12px;	
+	float:right;
+	margin-top: 1%;
+	margin-right: 2%;
+	width:20%;
+}
+    #block-user-login  h1{
+	 font-Size:12px;
+	}
+
+	h1/*titres principaux*/
+{
+	font-size : 17px ; 
+}
+    h2 { /*titres secondaires*/
+    font-Size: 14px;
+	}
+
+	section{
+	margin: 300px 2% 2% 20%;   /* top right bottom left */
+	}
+	header{
+      width:65%;	
+	}
+	legend{
+	  font-size:16x;
+	}
+
+}
+
+    /* ============================ For mobile phones: ========================== */
+
+@media only screen and (max-width: 560px) {
+    body {
+        background-color:white;
+    }
+	article {
+	margin: 3% 2% 3% 2%; /* top right bottom left */
+	}
+
+	footer {
+	font-size:18px;
+	}
+	footer a {
+	font-size:12px;
+	}
+
+	fieldset{
+	 width:90%;
+	 margin :  1% 1% 1% 1% :  /* top right bottom left */
+	}
+    input[type=password],input[type=text],input[type=email]{
+	width:70%;
+    }
+	input[type=submit], input[type=reset] ,input[type=impression] {
+		width:60%;
+	}
+	input[type=button] {
+		width:70%;
+	}
+
+	#conteneur{
+	  margin: 1% 1% 1% 1% ; /* top right bottom left */
+	}
+	#imageenhaut{
+	  height: 120px;
+	}
+
+	 #slideshow {
+	 height: 120px;
+	 }
+	 	 .vueS{
+	  height: 270px;
+	  }
+
+	aside
+{
+	padding :2px 2px 2px 2px ;
+	font-size:12px;
+	float:right;
+	margin: 4% 8% 4% 4%; /* top right bottom left */
+	width:30%;
+}
+	
+	#block-user-login {
+	padding:6px 6px 6px 6px ;
+	font-size:12px;
+	float:left;
+	margin-top: 2%;
+	margin-left: 2%;
+	width:40%;
+}
+    #block-user-login  h1{
+	 font-Size:12px;
+	}
+	#block-user-login legend{
+	  display:none;
+	}
+	
+	/* =========== nav pour mobile ============ */
+    nav{
+	border-radius: 20px;
+    border: 2px solid green;
+	background-image:linear-gradient(white, #8a0);
+	margin:400px 1% 2% 2%; /* top right bottom left */
+	width:95%;
+    }
+	
+	section{
+	margin: 2px 2% 2% 2% ;  /* top right bottom left */
+
+		}
+	#navigationMenu{
+	margin-top: 2%;
+	}
+	#menu{
+	display:none;
+	}
+	
+	header{
+		width:95%;
+	}
+	h1  { /*titres principaux*/
+
+	font-size : 14px ; 
+    }	
+	    h2 { /*titres secondaires*/
+    font-Size: 12px;
+	}
+
+	
+
+}
 
 
-/*============================block user login==================*/
+/*============================ logo ==================*/
 
 #logo
 {
-	width:20px;
-		margin-LEFT: 20px;
-				margin-top: 20px;
-
-		float:left;
-
-	
+	width:4%;
+	margin-left: 2%;
+	margin-top: 2%;
+	float:left;
 }
 
-/*============================block user login==================*/
 
-#block-user-login
-{
-	float:right;
-	margin-right: 40px;
-	margin-left: 40px;
-	width:180px;
-    border-radius: 20px;
-    padding:0px 10px 10px 10px; 
-    border: 2px solid green;
-    text-align: center ;
-    background-color:#FFFACD;
-}
 
 /*============================  banniere defilante ==================*/
 
  #slideshow {
+  float:left;
+  border-radius: 20px;
+  border: 2px solid green;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 3%;
   background-repeat:no-repeat;
   background-position:center center;
-  width: 590px;
-  height: 282px;
-  display: block;
-  float: left;
-  margin:  0px;
-  padding: 0px;
+  width: 95%;
   overflow: hidden;
   position: relative;
-  border: 1px solid gray;
-  margin-bottom: 20px;
+  border: 2px solid gray;
  }
  .vueS{
   width: 100%;
-  height: 282px;
   display:block;
   background-position:center center;
  }
@@ -87,130 +392,97 @@
  83%, 98% {top: -1410px;}  
  }
  #sContent {
-  -webkit-animation-name: AutoSlide;
-  -webkit-animation-duration: 30s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-name: AutoSlide; 
-  -moz-animation-duration: 30s; 
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: ease-in-out;
+	 
+	  /* -webkit- Chrome et Safari */
+  -webkit-animation-name: AutoSlide; 
+  -webkit-animation-duration: 10s;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: ease-in-out;  
+			/* -moz -Firefox */
+  -moz-animation-name: AutoSlide;  
+  -moz-animation-duration: 10s;  
+  -moz-animation-iteration-count: infinite;  
+  -moz-animation-timing-function: ease-in-out; 
+  
   animation-name: AutoSlide; 
   animation-duration: 10s; 
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
  }
+ 
    /*=====================  image en haut differente a chaque page  ================*/
 
   #imageenhaut
 {
-	margin-top: 5%;
-	border: 3px solid #ab4 ;
-    max-width: 95%;
+  border-radius: 20px;
+  float:left;
+  border: 2px solid green;
+  margin: 2% 2% 2% 2% ; /* top right bottom left */
+  background-repeat:no-repeat;
+  background-position:center center;
+  width: 95%;
+  display: block;
+  /* position: relative; */
+  border: 2px solid gray;
 }
+
+   /*=====================  image dans chaque article  ================*/
+
+  #imagearticle
+{
+  float:top;
+  border-radius: 20px;
+  border: 2px solid green;
+  margin: 2% 5% 2% 5%; /* top right bottom left */
+  background-repeat:no-repeat;
+  width: 70%;
+  border: 2px solid gray;
+}
+  #flechegauche
+{
+  float:left;
+  margin: 0 0 0 0; /* top right bottom left */
+  width: 10%;
+}
+  #flechedroite
+{
+  float:right;
+  margin: 0 0 0 0; /* top right bottom left */
+  width: 10%;
+}
+
+
+
 
   /*========================   conteneur =================*/
 
   #conteneur
 {
-    max-width: 900px;
-    margin: 0 auto ;
-    text-align: center ;
     border: 2px solid #ab4 ;
-    background-color: #F5FFFA;
-	background-image: url(../images/mysteres/lignes_nazca.jpg)  ;
+	background-image: url(../img/mysteres/lignes_nazca.jpg)  ;
 }
-/*============================================================= php =========================================*/
 
- *.myphp{
- color: green;
- font-size: 21px;
-}
-/*================================================debut test media querie pour site responsive=========================================*/
-@media (min-width: 992px) and (max-width: 2000px) {
-    body {
-		background-color: #dea ;
-    }
-	#article
-	{
-	font-size: 14px;
-	font-family: Verdana,Arial,Geneva,sans-serif;
-	}
-	#article img
-	{
-	width: 100%;
-	height: auto;
-	}
-}
-@media only screen and (max-width: 991px) {
-    body {
-        background-color:lightgreen;
-    }
-	#article img
-	{
-	width: 90%;
-	height: auto;
-	}
-}
-@media only screen and (max-width: 767px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 480px) {
-    body {
-        background-color:lightblue;
-    }
-	#article
-	{
-	font-size: 12px;
-	font-family: Verdana,Arial,Geneva,sans-serif;
-	}
-	#article img
-	{
-	width: 50%;
-	height: auto;
-	}
-}
-@media only screen and (max-width: 320px) {
-    body {
-        background-color:lightred;
-    }
-}
-/*=========================================================debut navigation================================================*/
-nav
-{
-  margin-left: 10px;
-  border-radius: 20px;
-  float: left;
-  width: 130px;
-  height:auto;
-  border: 2px solid green;
-  background-color: #CCFFFF;
-}
+/*===============================debut Navigation===========================================*/
 #menu {
-  padding:40px 40px 40px 10px; 
-  text-align: center;
+    text-align: center;
 }
 #menu li {
-	display: inline;
-	list-style: none;
+	background-image:white;
 }
 #menu a {
 	display:block;
-	margin: 0 10px;
-	min-width: 	90px;
+	/* margin: 5px 5px 5px 5px; */
+	width: 95%;
 	text-decoration: none;
 	color: black;
 	border:3px solid #336600;/*couleur vert fonce*/
 	border-radius: 10px 0px 10px 0px;
 	/* background-image:linear-gradient(white, #8a0); */
 	text-align: center;
-	line-height: 30px;
 	font-family: verdana;
-	font-size: 15px;
 	font-weight: bold;
+	background-color:white; 
+
 }
 
 /*menu survol*/
@@ -226,155 +498,95 @@ nav
 	border:3px solid #99ff66;
 	border-radius: 10px 0px 10px 0px;
 	color:white;
+
 }
 /*==========================================================debut pages html ===========================================================*/
+
+h1{
+	font-family:Verdana,Arial,Geneva,sans-serif;
+	color :#9b2;/*couleur verte*/
+	text-align: center;
+
+}
+h2
+{
+  margin-left:4%;
+  width:90%;
+  font-family:Verdana;
+  color :#9b2; /*couleur verte*/
+  text-align: center;
+	}
+	
+h3 {  /* titre dans menu nav */
+  font-family:Verdana;
+  color :#9b2; /*couleur verte*/
+}
+
+
 header
 {   
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    float:left;	
+    margin: 2% 2% 2% 2%;
     border-radius: 20px;
-    border: 2px solid green;
+    border: 3px solid green;
     text-align: center ;
-    background-color:#888888  ;
-    height: 400px ;
-    display: block;
-
+    background-color:black  ;
 }
-
+#block-user-login ,aside {
+	text-align:center;
+	border-radius: 20px;
+    border: 3px solid green;
+    background-color:#FFFACD;
+}
+#block-user-login a {
+	text-decoration:none;
+}
 section
 {
-    margin-left: 170px;
-    margin-right: 30px;
-    margin-bottom: 30px;
     border-radius: 20px;
-    border: 2px solid green;
-    text-align: center ;
-    background-color:#ADD8E6;
-	
+    border: 3px solid green;
+    background-color:Buttonface;
 }
-aside
-{
-	height:auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-	margin-bottom: 20px;
-    border-radius: 20px;
-    padding:20px 20px 20px 20px; 
-    border: 2px solid green;
-    background-color:#FFFACD;
-	display: block;
-	line-height:10px;
+
+section p {
+    text-align: justify ;
+    text-indent: 1em ;
+    line-height: 2.7em ;
 }
-article
+
+
+article 
 { 
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
     border-radius: 20px;
     padding:20px 20px 20px 20px; 
-    border: 2px solid green;
-    text-align: center ;
+    border: 3px solid green;
     background-color:#FFFACD;
-}
-
-article img
-{
-	display: block; 
-	max-width:600px;
-	margin: 0 auto; 
-}
-article
-{
-	text-align: justify ;
-}
-section
-{
-  padding: 0 40px 0 40px ;
-	text-align:justify;
 	font-family: verdana;
 	font-size: 12px ;
+	text-align:center;
 }
-section p:first-letter 
+
+
+article p:first-letter 
 {
 	font-size: x-large; 
 	font-weight: bold; 
 	color: ##9b2;
 	font-family:comic sans ms;
 }
-article img
-{
-  width:80%;
-	height: auto;
-	position:center;
-	margin: 0 auto; 
-	display:block;
-}
- h1
-{
-    padding: 0 0 0 -100px ;
-}
-
-h2
-{
-  font-family:Verdana,Arial,Geneva,sans-serif;
-  font-Size: 18px;
-  color :#9b2; /*couleur verte*/
-  text-align: center;
-  line-height: 25px ;
-  padding-left: 10px;
-  font-size: 1.4em ;
-  color: #9b2 ;
-  border-bottom: 1px solid #9b2 ;
-	}
-	
-h3
-{
-    margin-left: 15px ;
-    border-bottom: 1px solid #9b2 ;
-    border-left: 3px solid #9b2 ;
-    color: #9b2 ;
-}
-h4
-{
-	  text-align: center;
-
-  font-Size: 16px;
-      color: #9b2 ;
-
-}
 
 
-section p
-{
-    text-align: justify ;
-    text-indent: 2em ;
-    line-height: 3.7em ;
-}
-
-section a
-{
+article a {
     color: #8a0 ;
+	font-size: 1.0em ;
 	text-decoration:none;
 }
-
-section a:hover
-{
-  border:3px solid #99ff00;/*couleur vert clair*/
+article a:hover {
+   	cursor : pointer ;
 	border-radius: 10px 0px 10px 0px;
-	background-image:linear-gradient(white, #99ff66);
-
+	border:3px solid #99ff00;/*couleur vert clair*/
 }
-h1/*titres principaux*/
-{
-	font-size : 20px ; 
-	font-family:Verdana,Arial,Geneva,sans-serif;
-	color :#9b2;/*couleur verte*/
-	text-align: center;
-}
+	
 /*============================================================= infobulle =========================================*/
 
 #infobulle
@@ -386,80 +598,60 @@ font-size: 14pt ;
 /*============================================================debut page contact=====================================================*/
 	fieldset 
 	{
-	padding:0 20px 20px 20px;
-	margin-bottom:8px;
 	border:1px solid #14DC7F;
-	max-width:25%;
-	margin: 0 auto; 
+	
 	}
 	legend 
 	{
-    font-size:30px;
-	color:#14DC7F;
+	margin-left: 2% 2% 2% 14%;
+	color:black;
 	font-weight:bold;
 	text-align:center;
 	}
 
 form 
 {
+	margin:2% 2% 2% 2%;
 	background-color:#FAFAFA;
-	padding:10px;
-	max-width:120%;
  }
   label 
-{
-	margin-top:5px;
+{	
+	margin-top:2%;
 	display:block;
- }
-label.inline 
-{
-	display:inline;
-	margin-right:50px; 
  }
 input:focus, textarea:focus 
 {
 	background-color:#EEE8AA;
 	border-radius: 8px 8px 8px 8px;
  }
-input[type=submit]:focus, input[type=reset]:focus 
-{
-	background-color:#red;
+ 
+
+input[type=radio],[type=submit], [type=reset]{
+	margin:0% 0% 0% 5%; /* top right bottom left */
 }
 
-input[type=submit], input[type=reset] ,input[type=impression]
-{
-	width:150px;
-	margin-left:5px;
+
+input[type=submit], input[type=reset] ,input[type=impression],input[type=button] {
 	box-shadow:1px 2px 1px #336600;
 	cursor:pointer;
 	border-radius: 8px 8px 8px 8px;
+	
  } 
-#envoi:hover{
+#envoi:hover , #reset:hover, #impression:hover, #backoff:hover, #connection:hover  {
   border:3px solid #99ff00;/*couleur vert clair*/
-	border-radius: 10px 10px 10px 10px;
-	background-image:linear-gradient(white, #99ff66);
+  border-radius: 10px 10px 10px 10px;
+  background-image:linear-gradient(white, #99ff66);
   box-shadow:10px 10px 10px grey;
-  cursor : move ;
+  cursor : pointer ;
 }
-#reset:hover{
-  border:3px solid #99ff00;/*couleur vert clair*/
-	border-radius: 10px 10px 10px 10px;
-	background-image:linear-gradient(white, #99ff66);
-  box-shadow:10px 10px 10px grey;
-  cursor : move ;
-}
-#impression:hover{
-  border:3px solid #99ff00;/*couleur vert clair*/
-	border-radius: 10px 10px 10px 10px;
-	background-image:linear-gradient(white, #99ff66);
-  box-shadow:10px 10px 10px grey;
-  cursor : move ;
-}
-table
-{
-    border-collapse: collapse;
-    border-radius: 10px 10px 10px 10px;
 
+table {
+	margin : 10% auto 10% auto ;     /* top right bottom left */
+    /* border-collapse: collapse; */
+    border-radius: 10px 10px 10px 10px;
+}
+caption{
+	font-Size : 16px;
 }
 td, th /* Mettre une bordure sur les td ET les th */
 {
@@ -470,9 +662,12 @@ td, th /* Mettre une bordure sur les td ET les th */
 /*===============================================================debut pied de page===================================================================*/
 footer
 {
+	float:bottom;
+	margin: 16% 2% 2% 2%; /* top right bottom left */
+	border: 3px solid green;
+    border-radius: 10px 10px 10px 10px;
 	font-family: Arial;
 	text-align:center;
-	font-size:24px;
 	color:#336600;
 	background-image:linear-gradient(white, #8a0);
 	max-height:auto;
@@ -480,19 +675,23 @@ footer
 footer a
 {
 	font-family: Arial;
-	font-size:18px;
 	color:#336600;
 	text-decoration:none;
-	display:block;
-	text-align:center;
+}
+footer a:hover{
+	cursor : pointer ;
+	border-radius: 10px 0px 10px 0px;
+	background-image:linear-gradient(white, #8a0);
+	border:3px solid #99ff00;/*couleur vert clair*/
 }
 
-
 /*============================ debut geolocalisation===================================================================*/
-#carte_js{height: 300px; }
+#carte_js{
+	height: 300px; 
+	margin-left:5%;
+	width:90%;
+	}
 /*=============================== FIN CSS  ====================================================*/
-
-
 
 
 

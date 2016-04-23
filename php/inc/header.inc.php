@@ -1,7 +1,12 @@
+
+
+<a href ="./index.php" title="retour à l'accueil"> <img src="../img/logo.jpg" id="logo" ></a>
+
+
 <?php
 
 function headerinclude ($param) { 
-  echo "<h1> BIENVENUE SUR LE SITE MYSTERES ET ILLLUSIONS</h1>" ; 
+  echo "<h1> BIENVENUE SUR LE SITE MYSTERES ET ILLUSIONS</h1>" ; 
   ?>
   
   <?php

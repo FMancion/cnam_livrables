@@ -49,19 +49,14 @@ echo "ORIG_PATH_INFO : " . $_SERVER['ORIG_PATH_INFO'] . "<br />";
 	if ($_SERVER['HTTP_HOST'] == 'localhost' ) {
 		$uri .= 'localhost/mystillus_local';
 	} 
-		if ($_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) {
+	if ($_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ) {
 		$uri .= 'mystillus.esy.es';
-	} 
-		if ($_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) {
-		$uri .= 'mystillus.hol.es';
-	} 
-	
+	}
+	if ($_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ) {
+		$uri .= 'mystillus.hol.es/hol';
+	}
 	header('Location: '.$uri.'/php/');
 	//header('Location: '.$uri.'/mystillus.esy.es/php/');
 	exit;
 ?>
-
 Something is wrong somewhere :-(
-
-
-

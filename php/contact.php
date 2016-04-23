@@ -1,16 +1,17 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif] -->
 <title> MYSTERES ET ILLUSIONS - FORMULAIRE DE CONTACT</title>
  <meta charset="utf-8"/>
- <meta name="AUTHOR" content="Franck M.">
+ <meta name="AUTHOR" content="Franck M. Cnam">
  <meta name="Description" content="site scientifique sur des mysteres ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales" />	
- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
  <link rel="stylesheet" href ="../css/standard.css"/>
- <link rel="shortcut icon" href="../images/projet.ico" />
+ <link rel="stylesheet" href ="../css/mobile.css"/>
+ <link rel="shortcut icon" href="../img/favicon.ico" />
 </head>
 	
 <body>
@@ -18,12 +19,13 @@
 <div id="conteneur">
 
 <header>  
-<a href ="./index.php" title="retour à l'accueil"> <img src="../images/cube_fou.jpg" id="logo"  ></a>
-
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("formulaire_contact"); 
-  include ("inc/banniere.inc.php"); 
+ include ("./inc/header.inc.php"); headerinclude ("form_contact"); 
 ?>
+ <img src="../img/img-form.png" id="imageenhaut"  >	
+
+</header>
+
 <div id="block-user-login" >
 <h1>Espace Membre</h1>
 <?php  
@@ -31,51 +33,58 @@
  ?>
   <!-- On affiche un lien pour fermer notre session -->
 </div>
-</header>
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("formulaire_contact");
+ include ("inc/cookie.inc.php"); cookieinclude ("contact");
 ?>
 </aside>
 
-
 <nav>
-<ul id="menu">
-<?php  
- include ("./inc/menu.inc.php"); 
- ?>
+<!-- menu navigation pc -->
+ <ul id="menu">
+ <?php  
+  include ("./inc/menu.inc.php"); 
+  ?>
+ </ul>
+<!-- menu navigation mobile -->
+  <ul id="navigationMenu">
+ <?php  
+  include ("./inc/menu-mobile.inc.php"); 
+  ?>
   </ul>
 </nav>
 
-    <section>
+<section>
 	 <fieldset>
       <legend>Formulaire de contact</legend>
-      <form name="formulaire" method="GET"  id="mc-form" action="./traitement.php"  onSubmit ="return verifForm(this);" >
-        <label>Veuillez indiquer le sujet de votre demande:</label>
-        <input type="radio" name="sujet" id="sujet" value="contact" checked>demande de contact<br>
-        <input type="radio" name="sujet" value="information">demande d'information<br>
-        <input type="radio" name="sujet" value="amelioration">demande d'amélioration<br></br>
-        <label>Nom (*) <input  type="text" name="nom" id="nom" onblur="NomAvecLettres(this)"  size="30px" "maxlength="50" required placeholder="pas de chiffres svp"/></label></br>
-        <label>Message (*) <textarea cols="30" rows="4" name="message" id="message" placeholder="votre message, pas de caractères spéciaux" required onblur="MessSansCaractAnormaux(this);" /></textarea></label></br>
-        <label>Mail (*) <input type="email" name="email" id="email" onblur="BonFormatMail(this)" maxlength="100" required placeholder="ex : exemple@domaine.fr "/></label></br>
-        <input id="envoi" name="envoi" type="submit"  value="Envoyer"   />
+      <form name="formulaire" method="GET"  id="mc-form" action="./traitement.php" onSubmit ="return verifForm(this);" >
+        <label>Veuillez indiquer le sujet de votre demande:</label></br>
+        <input type="radio" name="sujet" id="sujet" value="contact" checked>contact<br>
+        <input type="radio" name="sujet" value="information">information<br>
+        <input type="radio" name="sujet" value="amelioration">amélioration<br></br>
+        <p>Nom (*) <input  type="text" name="nom" id="nom" onblur="NomAvecLettres(this)"  maxlength="50" required placeholder="pas de chiffres svp"/></p></br>
+        <p>Message (*) <textarea  name="message" id="message" rows="5" cols="20" placeholder="votre message, pas de caractères spéciaux" required onblur="MessSansCaractAnormaux(this);" /></textarea></p></br>
+        <p>Mail (*) <input type="email" name="email" id="email" onblur="BonFormatMail(this)" maxlength="50" required placeholder="ex : exemple@domaine.fr "/></p></br></br>
+        <input id="envoi" name="envoi" type="submit"  value="Envoyer"   /></br>	
         <input id="reset" name="reset" type="reset" value="Réinitialiser"/>
+		</br>
         </form>
+		</br>
+        	 <div id="carte_js"></div>
      </fieldset>
-	 <div id="carte_js"></div>
-	</section>
-            
+</section>
+
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("formulaire_contact	"); 
+ include ("./inc/footer.inc.php");  footerinclude ("form_contact"); 
 ?>
 </footer>
 
 
 </div>
-  <script src="../js/verif_form.js"></script>
+  <!-- <script src="../jvs/verif_form.js"></script> -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
-  <script src="../js/map.js" type="text/javascript"></script>
+  <script src="../jvs/map.js" type="text/javascript"></script>
 </body>
 </html>

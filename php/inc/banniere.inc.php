@@ -1,14 +1,14 @@
-
+	
 
 
 <div id="slideshow">
  <ul id="sContent">
-  <li><a href="./peinturesSW.php" title="peinturesSW" class="vueS" style="background-image:url(../images/mysteres/swnewyork.jpg)" ></a></li>
-  <li><a href="./lignesnazca.php" title="lignesnazca" class="vueS" style="background-image:url(../images/illusions/robe.jpg)" ></a></li>
-  <li><a href="./lasbolas.php" title="lasbolas " class="vueS" style="background-image:url(../images/mysteres/boule.jpg)" ></a></li>
-  <li><a href="damieradelson.php" title="damieradelson" class="vueS" style="background-image:url(../images/illusions/shadow-illusion.jpg)" ></a></li>
-  <li><a href="lignespiano.php" title="lignespiano" class="vueS" style="background-image:url(../images/illusions/lignespiano.jpg)" ></a></li>
-  <li><a href="rocher.php" title="rocher" class="vueS" style="background-image:url(../images/mysteres/rocher.jpg)" ></a></li>
+  <li><a href="./peintures_SW.php" title="peinturesSW" class="vueS" style="background-image:url(../img/mysteres/swnewyork.jpg)" ></a></li>
+  <li><a href="./lignes_nazca.php" title="lignesnazca" class="vueS" style="background-image:url(../img/mysteres/lignes2.jpg)" ></a></li>
+  <li><a href="./lasbolas.php" title="lasbolas " class="vueS" style="background-image:url(../img/mysteres/boule.jpg)" ></a></li>
+  <li><a href="./damier_adelson.php" title="damieradelson" class="vueS" style="background-image:url(../img/illusions/damier2.jpg)" ></a></li>
+  <li><a href="./lignes_piano.php" title="lignespiano" class="vueS" style="background-image:url(../img/illusions/lignespiano.jpg)" ></a></li>
+  <li><a href="./peintures_SW.php" title="peinturesSW" class="vueS" style="background-image:url(../img/mysteres/sw2.jpg)" ></a></li>
  </ul>
 </div>
 <br></br>
