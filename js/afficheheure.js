@@ -1,1 +1,0 @@
-window.onload = date_heure('dh') ;
