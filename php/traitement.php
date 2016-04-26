@@ -20,9 +20,10 @@
 <?php   
 /* declaration des variables */
  $nom = htmlspecialchars($_GET['nom']);
- $sujet = htmlspecialchars($_GET['sujet']);
+ $sujet = $_GET['sujet'];
  $message = htmlspecialchars($_GET['message']);
- $email = htmlspecialchars($_GET['email']);
+ $email = $_GET['email'];
+ $tel = $_GET['tel'];
 ?>
 
 
@@ -42,10 +43,11 @@ $regex = '/^' . $atom . '+' .   // Une ou plusieurs fois les caractères autoris
 $domain . '{2,63}$/i' ;          // Suivi de 2 à 63 caractères autorisés pour le nom de domaine
 
 //$regex_nom = ' ^[\w$@%*+\-_!]{8,15}$ ' ;   // regex nom , pas dechiffres 
-$regex_nom="#[a-zA-Z0-9]#" ;
-$regex_message = '' ;  // regex message, pas de < ni > 
+$regex_nom="#^[a-zA-Z0-9]$#" ;
+$regex_message = "#[a-zA-Z0-9]#" ;  // regex message, pas de < ni > 
 $regex_password='^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$ ' ;
 $regex_mail = '/^' .$atom. '+' . '(\.' .$atom. '+)*' .'@' . '(' .$domain. '{1,63}\.)+' .$domain. '{2,63}$/i' ;
+$regex_tel = "#^0[1-68]([-. ]?[0-9]{2}){4}$#" ;
 
 
 // test de l'adresse e-mail
@@ -54,33 +56,48 @@ $regex_mail = '/^' .$atom. '+' . '(\.' .$atom. '+)*' .'@' . '(' .$domain. '{1,63
 	
 	echo " TEST DU NOM</br>" ;
 	if  ( preg_match("#[a-zA-Z0-9]#" , $nom) ) {
-    echo "le nom $nom est valide</br>"; 
+      echo "le nom $nom est valide <br></br>"; 
 	} else { 
-	echo "le nom $nom nest pas valide</br>";  }
+	echo "le nom $nom nest pas valide <br></br>"; 
+	}	
 	
 	echo " TEST DU MESSAGE</br>" ;
 	if  ( preg_match("#[a-zA-Z0-9]#" , $message) ) {
-    echo "le message $message est valide</br>"; 
+      echo "le message $message est valide <br></br>"; 
 	} else { 
-	echo "le message $message nest pas valide</br>";  }
-	
+	    echo "le message $message nest pas valide <br></br>"; 
+	 }
+	 
 	echo " TEST DE L EMAIL</br>" ;
 	if  ( preg_match($regex_mail , $email) ) {
-    echo "le email $email est valide</br>"; 
+      echo "le mail $email est valide <br></br>"; 
 	} else { 
-	echo "le mail $email nest pas valide</br></br>";  }
+	  echo "le mail $email nest pas valide </br></br>"; 
+	  }
+	  
+	  echo " TEST DU TEL</br>" ;
+	if  ( preg_match($regex_tel , $tel) ) {
+      echo "le tel $tel est valide <br></br> "; 
+	} else { 
+	  echo "le tel $tel nest pas valide </br></br>"; 
+	  }
 	
-	if (  (preg_match("#[a-zA-Z0-9]#" , $nom)) && (preg_match("#[a-zA-Z0-9]#" , $message)) && (preg_match($regex_mail,$email)) ) {
+	if (  (preg_match($regex_nom , $nom)) && 
+			(preg_match($regex_message , $message)) &&
+				(preg_match($regex_mail,$email)) && 
+					(preg_match($regex_tel,$tel))) {
 	
-	echo 'tout est valide, on peut lancer la requete en base </br>' ;
+	  echo 'tout est valide, on peut lancer la requete en base </br>' ;
+	  require("inc/connexion.inc.php"); requetebdd($requete) ;
+	  echo "<h1> Votre message a bien été envoyé en base :</h1>";
 	
-	require("inc/connexion.inc.php"); requetebdd($requete) ;
-	
-} else {
-    echo "un champ  n'est pas valide, la requete sql n'est pas lancée ";
+   } else {
+    echo "un champ n'est pas valide, la requete sql n'est pas lancée ";
 	//echo '<body onLoad="alert(\'les valeurs du formulaire ne sont pas correctes \')">';
-	//header ('location: ./contact.php');
-}
+	
+	//header ('location: ./contact_new.php');
+	//exit ;
+   }
  ?>
     <p> ma requete d'insertion : <br/> "<?php echo $requete; ?>" </p> 
 
@@ -90,7 +107,6 @@ $date = date("d-m-Y");
 $heure = date("H:i");
 ?>
   
-<h1> Votre message a bien été envoyé en base :</h1>
 <TABLE > 
   <CAPTION> Résultats du formulaire </CAPTION> 
  <TR> 
@@ -106,12 +122,16 @@ $heure = date("H:i");
  <TD> <?php echo $nom ?></TD> 
   </TR> 
   <TR> 
+ <TH> MESSAGE </TH> 
+ <TD> <?php echo $message ?></TD> 
+  </TR> 
+ <TR> 
  <TH> MAIL </TH> 
  <TD> <?php echo $email ?></TD> 
   </TR> 
   <TR> 
- <TH> MESSAGE </TH> 
- <TD> <?php echo $message ?></TD> 
+ <TH> TEL </TH> 
+ <TD> <?php echo $tel ?></TD> 
   </TR> 
  <TR> 
  <TH> LARGEUR PAGE (temps réel)</TH> 
@@ -121,8 +141,8 @@ $heure = date("H:i");
 </article>
 
 <article>
-  <button onclick="affichermasquer(this)">faire apparaitre ou enlever lien</button>
-  <p id="amasquer"><a href ="./index_admin.php">retour backoffice</a></p>
+  <button onclick="affichermasquer(this)">faire apparaitre ou enlever lien du formulaire</button>
+  <p id="amasquer"><a href ="./contact.php">retour formulaire</a></p>
 </article>
 
     

@@ -21,6 +21,7 @@
 /* declaration des variables */
  $tc=$_GET['tc'];
  $login=$_GET['login'];
+ 
 ?>
 
 <article>
@@ -31,6 +32,7 @@
  
   require("inc/connexion.inc.php"); 
    $motdepasse = rendvaleur($requete) ; 
+   $pass_crypte = crypt($motdepasse); // On crypte le mot de passe
    $nblignes = rendnblignes ($requete) ; 
    
    if ( $nblignes == 0 ) { 
@@ -39,8 +41,9 @@
    } else { 
      echo "nb de lignes trouvées : " . $nblignes . "<br />";
      echo "le mot de passe de ".$login." est : " . $motdepasse . "<br />";
+	 echo ' <p> mot de passe crypté pour unix est :<br /> ' . $pass_crypte . '</p>';
    }
-   
+    
   
 ?>     
       <p> ma requete est : <br/> "<?php echo $requete; ?>" </p> 

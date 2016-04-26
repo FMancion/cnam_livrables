@@ -17,7 +17,7 @@ if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
 
 	}
 else {
-	echo 'Les variables de session ne sont pas déclarées.</br>';
+	echo '<p>Les variables de session ne sont pas déclarées.</p></br>';
 	//echo '<body onLoad="alert(\'les variables du formulaire ne sont pas déclarées \')">';
 	echo '<a href="./index.php"><input type="button" id="connection" value="se connecter"/></a>' ;
 }

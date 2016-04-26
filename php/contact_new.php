@@ -30,13 +30,23 @@
 <h1>Espace Membre</h1>
 <?php  
  include ("./inc/userco.inc.php");
+ if ( isset($_SESSION['nom']) && isset($_SESSION['message'] )) {
+
+	// On teste pour voir si nos variables ont bien été enregistrées
+	
+	echo ' <body onLoad="alert(\' votre formulaire est correct ' . $_SESSION['nom'] . ' \')"> ' ;
+
+	}
+else {
+	echo '<body onLoad="alert(\' les données du formulaire ne sont pas correctes \n veuillez réitérer votre demande\')">';
+}
  ?>
   <!-- On affiche un lien pour fermer notre session -->
 </div>
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("contact");
+ include ("inc/cookie.inc.php"); cookieinclude ("contactnew");
 ?>
 </aside>
 
@@ -54,6 +64,8 @@
   ?>
   </ul>
 </nav>
+
+
 
 <section>
 	 <fieldset>

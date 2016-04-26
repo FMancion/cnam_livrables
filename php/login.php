@@ -26,7 +26,7 @@
 
    // on teste si nos variables sont définies
 
-if (isset($_GET['login']) && isset($_GET['pwd'])) {
+if ( isset($_GET['login']) && isset($_GET['pwd'])) {
 			// dans ce cas, tout est ok, on peut démarrer notre session
 			session_start ();
 
@@ -57,8 +57,8 @@ if (isset($_GET['login']) && isset($_GET['pwd'])) {
 		  //ob_end_flush();
 		}	
 	} else {
-      echo '<body onLoad="alert(\'les variables du formulaire ne sont pas déclarées \')">';
-      echo ' Les variables du formulaire ne sont pas déclarées.';
+      //echo '<body onLoad="alert(\'les variables du formulaire ne sont pas déclarées \')">';
+      //echo ' Les variables du formulaire ne sont pas déclarées.';
       }
 	 header ('location: ./index_connected.php');
 	 exit ;

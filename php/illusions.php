@@ -4,7 +4,7 @@
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif] -->
-	<title> ILLUSIONS ACCUEIL</title>
+	<title> ILLUSIONS D'OPTIQUE</title>
 	<meta charset="utf-8"/>
 	<meta name="AUTHOR" content="Franck M.">
 	<meta name="Description" content="site scientifique sur des mysteres ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales" />	

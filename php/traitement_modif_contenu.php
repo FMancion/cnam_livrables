@@ -20,9 +20,10 @@
 <?php   
 /* declaration des variables */
  $titre=$_GET['titre'];
- $contenu=$_GET['contenu'];
+ $contenu= mysql_real_escape_string ( $_GET['contenu'] );
+ //$contenu = htmlspecialchars ($contenu) ;
  // securisation 
- $contenu = mysql_real_escape_string ($contenu) ;
+ //$contenu = mysqli_real_escape_string ($contenu) ;
 ?>
 
 <article>
@@ -38,7 +39,7 @@
     <p> ma requete de selection : <br/> "<?php echo $requete1; ?>" </p> 
 
  <?php
-  $requete2 = " UPDATE article set contenu='.$contenu.' WHERE titre='.$titre.' " ; 
+  $requete2 = " UPDATE article set contenu='$contenu' WHERE titre='$titre' " ; 
 
   requetebdd($requete2) ;
   

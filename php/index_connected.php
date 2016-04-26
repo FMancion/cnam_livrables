@@ -29,15 +29,22 @@
 <h1>Espace Membre</h1>
 <?php  
  include ("./inc/userco.inc.php");
- if ( ! isset($_GET['login'] ) || ! isset($_GET['pwd'])) {
-  echo '<body onLoad="alert(\'membre non reconnu ...	 \')">';
+ if ( isset($_SESSION['login']) && isset($_SESSION['pwd'] )) {
+
+	// On teste pour voir si nos variables ont bien été enregistrées
+	
+	echo ' <body onLoad="alert(\' Vous êtes connecté ' . $_SESSION['login'] . ' \')"> ' ;
+
+	}
+else {
+	echo '<body onLoad="alert(\' membre inconnu \')">';
 }
  ?>
 </div>
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("accconnected");
+ include ("inc/cookie.inc.php"); cookieinclude ("connected");
 ?>
 </aside>
 

@@ -36,7 +36,7 @@
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("acc_mysteres");
+ include ("inc/cookie.inc.php"); cookieinclude ("mysteres");
 ?>
 </aside>
 
