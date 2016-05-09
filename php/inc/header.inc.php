@@ -1,17 +1,19 @@
+	
 
-
-<a href ="./index.php" title="retour à l'accueil"> <img src="../img/logo.jpg" id="logo" ></a>
+<a href ="./index.php" title="retour à l'accueil"> <img src="../img/logo.jpg" id="logo" alt="mystillus-logo" ></a>
 
 
 <?php
 
-function headerinclude ($param) { 
-  echo "<h1> BIENVENUE SUR LE SITE MYSTERES ET ILLUSIONS</h1>" ; 
-  ?>
-  
-  <?php
-  echo "<h1>Vous êtes sur la page $param</h1>" ; 
+function headerinclude ($param) { ?>
 
-}
-?>
+ <h1>BIENVENUE SUR LE SITE MYSTILLUS </h1>
+ <h2> Vous êtes sur la page mystillus-<?php echo $param ; ?>  </h2>
+ 
+ 
+ 
+<?php } ?>
+
+
+
 

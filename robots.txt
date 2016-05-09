@@ -1,9 +1,31 @@
 
 
-Sitemap: http://www.mystillus.esy.es/sitemap.xml
+Sitemap: http://mystillus.esy.es/sitemap.xml
 
 
-# bloque l'indexation du repertoire php/inc pour les robots
+# bloque l'indexation des repertoires sans interet pour les robots
 
 User-agent: *
-Disallow: /php/inc/*
+Disallow: /adm/*
+Disallow: /bdd/*
+Disallow: /csv/*
+Disallow: /maq/*
+Disallow: /old/*
+Disallow: /scr/*
+
+Disallow: /php/traitement*.php
+
+Disallow: /php/index-connected.php
+Disallow: /php/index-admin.php
+
+Allow:    /img/*
+Allow: 	  /php/*
+Allow:    /css/*
+Allow:	  /jvs/*
+Allow:    /pwd/*
+
+
+
+
+
+

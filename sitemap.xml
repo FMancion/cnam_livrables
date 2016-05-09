@@ -1,61 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://mystillus.esy.es/index.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://www.mystillus.esy.es/index.php/</loc><changefreq>daily</changefreq></url>
 
-<url>
-  <loc>http://mystillus.esy.es/php/</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/index.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/peintures_SW.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/lignes_nazca.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/lasbolas.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/damier_adelson.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/lignes_piano.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/index_connected.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/index_admin.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/mysteres.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/illusions.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/contact.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mystillus.esy.es/php/legales.php</loc>
-  <changefreq>monthly</changefreq>
-</url>
+<url><loc>http://mystillus.esy.es/php/index.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://www.mystillus.esy.es/php/index.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/mysteres.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://www.mystillus.esy.es/php/mysteres.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/illusions.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://www.mystillus.esy.es/php/illusions.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/lignes-nazca.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://www.mystillus.esy.es/php/lignes-nazca.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/lignes-piano.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://www.mystillus.esy.es/php/lignes-piano.php/</loc><changefreq>daily</changefreq></url>
 </urlset>

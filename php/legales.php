@@ -1,32 +1,24 @@
-﻿<!DOCTYPE html>
+﻿	<!DOCTYPE html>
 <html lang="fr">
+<!---- include head avec 2 paramètres title et content  -->
   <head>
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif] -->
-	<title> MYSTERES ET ILLUSIONS - MENTIONS LEGALES </title>
-	<meta charset="utf-8"/>
-	<meta name="AUTHOR" content="Franck M. CNAM Bourges">
-	<meta name="Description" content="site scientifique sur des mysteres ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales" />	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-	<link rel="stylesheet" href ="../css/standard.css"/>
-	<link rel="stylesheet" href ="../css/mobile.css"/>
-	<link rel="shortcut icon" href="../img/favicon.ico" />
+  <?php
+  include ("inc/head.inc.php"); headinclude ("MYSTILLUS - MENTIONS LEGALES","site scientifique sur des mystères ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
+  ?>  
   </head>
 	
 <body>
-
+<?php include_once("inc/analyticstracking.inc.php") ; ?>
 <div id="conteneur">
 
 <header>  
 <?php   
  include ("./inc/header.inc.php"); headerinclude ("mentions_legales"); 
 ?>
- <img src="../img/legales.jpg" id="imageenhaut"  >	
+ <img src="../img/legales.jpg" id="imageenhaut"  alt="mystillus legales">	
 </header>
 
 <div id="block-user-login" >
-<h1>Espace Membre</h1>
 <?php  
  include ("./inc/userco.inc.php");
  ?>
@@ -41,17 +33,13 @@
 
 <nav>
 <!-- menu navigation pc -->
- <ul id="menu">
  <?php  
   include ("./inc/menu.inc.php"); 
   ?>
- </ul>
 <!-- menu navigation mobile -->
-  <ul id="navigationMenu">
  <?php  
   include ("./inc/menu-mobile.inc.php"); 
   ?>
-  </ul>
 </nav>
 
 <section>
@@ -93,7 +81,7 @@ Hébergement : rue coursarlon, Bourges
 	
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("mentions_legales"); 
+ include ("./inc/footer.inc.php");  footerinclude ("mentions_légales"); 
 ?>
 </footer>
 

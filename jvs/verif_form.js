@@ -1,5 +1,16 @@
 // vérification d'un formulaire
 
+function LoginSansInf($champ) {
+  $champvaleur = $champ.value;
+  $maregex = /[\<\>]+/ ;
+  if($champvaleur.match($maregex)){ 
+    alert(" NOK : Pas de < ou > SVP");
+    $champ.focus();
+    return false;
+  } 
+ //$champ.value=$champ.value.toUpperCase(); return true;
+}
+
 function NomAvecLettres($champ) {
   $champvaleur = $champ.value;
   $maregex = /[1-9]+/ ;
@@ -8,11 +19,13 @@ function NomAvecLettres($champ) {
     $champ.focus();
     return false;
   } 
-$champ.value=$champ.value.toUpperCase(); return true;
+ //$champ.value=$champ.value.toUpperCase(); return true;
 }
+
 function MessSansCaractAnormaux($champ){
   $champvaleur = $champ.value;
-  $maregex = /[\<|\>|\@]+/ ;
+  //$maregex = /[\<|\>|\@]+/ ;
+  $maregex = /[]+/ ;
   if($champvaleur.match($maregex)){ 
     alert(" NOK : Pas de caractères spéciaux dans le message SVP");
     $champ.focus();
@@ -20,6 +33,7 @@ function MessSansCaractAnormaux($champ){
   }
   return true;
 }
+
 function TelSansLettres($champ) {
   $champvaleur = $champ.value;
   $maregex = /[a-zA-Z]+/ ;
@@ -30,6 +44,7 @@ function TelSansLettres($champ) {
   }
   return true;
 }
+
 function BonFormatMail($champ) {
   $champvaleur = $champ.value;
   $maregex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6}$/ ;
@@ -40,6 +55,7 @@ function BonFormatMail($champ) {
   }
  return true;
 }
+
 function verifForm(formulaire) {
   var ok = true;
   ok = ok && NomAvecLettres(formulaire.nom);

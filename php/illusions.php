@@ -1,17 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
+<!---- include head avec 2 paramètres title et content  -->
   <head>
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif] -->
-	<title> ILLUSIONS D'OPTIQUE</title>
-	<meta charset="utf-8"/>
-	<meta name="AUTHOR" content="Franck M.">
-	<meta name="Description" content="site scientifique sur des mysteres ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales" />	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-	<link rel="stylesheet" href ="../css/standard.css"/>
-	<link rel="stylesheet" href ="../css/mobile.css"/>
-	<link rel="shortcut icon" href="../img/favicon.ico" />
+  <?php
+  include ("inc/head.inc.php"); headinclude ("MYSTILLUS ILLUSIONS d'optique","site scientifique sur les mystères scientifiques et illusions d'optique ");
+  ?>  
   </head>
 	
 <body>
@@ -20,14 +13,13 @@
 
 <header>  
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("accueil_illusions"); 
+ include ("./inc/header.inc.php"); headerinclude ("illusions"); 
  //include ("inc/banniere.inc.php"); 
 ?>
- <img src="../img/illusions/robe.jpg" id="imageenhaut"  >	
+ <img src="../img/illusions/robe.jpg" id="imageenhaut" alt="illusion robe">	
 </header>
 
 <div id="block-user-login" >
-<h1>Espace Membre</h1>
 <?php  
  include ("./inc/userco.inc.php");
  ?>
@@ -42,17 +34,13 @@
 
 <nav>
 <!-- menu navigation pc -->
- <ul id="menu">
  <?php  
   include ("./inc/menu.inc.php"); 
   ?>
- </ul>
 <!-- menu navigation mobile -->
-  <ul id="navigationMenu">
  <?php  
   include ("./inc/menu-mobile.inc.php"); 
   ?>
-  </ul>
 </nav>
     
 	<section>
@@ -61,12 +49,12 @@
 	 <p> Vous trouverez ci dessous les liens pour accedérer à l'image et à l'explication de chaque illusion !</p> 
     </article>
     <article>
-  		<h2><a href="./damier_adelson.php">Le damier d'Adelson</a></h2> 
+  		<h2><a href="./damier-adelson.php" >Le damier d'Adelson</a></h2> 
        <p style="cursor:pointer;" onclick="montre('resume1');">cliquez ici pour voir/enlever le résumé</p>
        <div id="resume1" style="display:none;">
        <p>Cette illusion a été créée en 1995 par Edward.H ADELSON, un chercheur de l’institut technologique du Massachusetts, qui travaille beaucoup sur les illusions qui jouent sur la luminosité, et le contraste.</p>
        </div>
-       <h2><a href="./lignes_piano.php">Les lignes piano</a></h2>
+       <h2><a href="./lignes-piano.php" >Les lignes piano</a></h2>
        <p style="cursor:pointer;" onclick="montre('resume2');">cliquez ici pour voir/enlever le résumé</p>
        <div id="resume2" style="display:none;">
        <p>Une illusion au style particulier, qui consiste à regarder l'image, croire une chose, et ensuite réaliser, que peut être ce que l'on voit n'est pas la réalité ..</p>

@@ -1,8 +1,8 @@
 
 <?php
-// On démarre la session (ceci est indispensable dans toutes les pages de notre site)
+ // On démarre la session (ceci est indispensable dans toutes les pages de notre site)
 
-//session_start ();
+ //session_start ();
 
 $ndom=$_SERVER['HTTP_HOST'] ;
 
@@ -13,31 +13,37 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' )  {
   //} else {
 	//  echo ' <li><a href ="./index_user.php" title="accueil">accueil</a></li>' ;
   //}
-  echo "<h3>navigation sur " . $ndom. "</h3>";
-  echo ' <li><a href ="./index_connected.php" title="index">accueil</a></li>' ;
-  echo ' <li><a href ="./index_admin.php" title="index_admin">back-office</a></li>' ;
-  echo ' <li><a href ="./mysteres.php" title="mystères">mystères</a></li>' ;
-  echo ' <li><a href ="./illusions.php" title="illusions">illusions</a></li>' ;
-  echo ' <li><a href ="./contact.php" title="contact">Contact</a></li>' ;
-  echo "<h3>liens externes</h3>";
-  echo ' <li><a href ="http://positivr.fr/illusions-d-optique-gif/" title="22 illusions positivr">positivr</a></li>' ;
-  echo ' <li><a href ="http://www.planet.fr/monde-sciences-10-mysteres-de-la-nature-toujours-inexpliques.546655.1608.html" title="mysteres scientifiques sciences 10">10 myst</a></li>' ;
-  echo ' <li><a href ="http://soocurious.com/fr/8-cites-en-ruines-qui-restent-encore-un-mystere-pour-les-scientifiques/" title="mysteres scientifiques des cités en ruines">ruines</a></li>' ;
+  ?>
+  <h3>navigation sur <?php echo $ndom ; ?> </h3> 
+  <ul id="menu">
+  <li><a href ="./index-connected.php" title="index"  >accueil</a></li>
+  <li><a href ="./index-admin.php" title="index_admin"  >back-office</a></li>
+  <li><a href ="./mysteres.php"  title="mysteres"  >mystères</a></li>
+  <li><a href ="./lignes-nazca.php" title="mysteres"  >lignes de Nazca</a></li>
+  <li><a href ="./peintures-sw.php" title="mysteres"  >peintures SW</a></li>
+  <li><a href ="./lasbolas.php" title="mysteres"  >LasBolas</a></li>
+  <li><a href ="./illusions.php" title="illusions"  >illusions</a></li>
+  <li><a href ="./damier-adelson.php" title="illusions"  >damier Adel</a></li>
+  <li><a href ="./lignes-piano.php" title="illusions"  >lignes piano</a></li>
+  <li><a href ="./contact.php" title="contact" >Contact</a></li>
+  </ul>
+  <?php } else { ?>
+  <h3>navigation sur <?php echo $ndom ; ?> </h3> 
+  <ul id="menu">
+  <li><a href ="/php/index-connected.php" title="index"  >accueil</a></li>
+  <li><a href ="/php/index-admin.php" title="index_admin"  >back-office</a></li>
+  <li><a href ="/php/mysteres.php"  title="mysteres"  >mystères</a></li>
+  <li><a href ="/php/lignes-nazca.php" title="mysteres"  >lignes de Nazca</a></li>
+  <li><a href ="/php/peintures-sw.php" title="mysteres"  >peintures SW</a></li>
+  <li><a href ="/php/lasbolas.php" title="mysteres"  >LasBolas</a></li>
+  <li><a href ="/php/illusions.php" title="illusions"  >illusions</a></li>
+  <li><a href ="/php/damier-adelson.php" title="illusions"  >damier Adel</a></li>
+  <li><a href ="/php/lignes-piano.php" title="illusions"  >lignes piano</a></li>
+  <li><a href ="/php/contact.php" title="contact"   >Contact</a></li>
+ </ul>
+ <?php } ?>
 
-} else {
-  echo "<h3>navigation sur " . $ndom . "</h3>";
-  echo ' <li><a href ="/php/index_connected.php" title="index">accueil</a></li>' ;
-  echo ' <li><a href ="/php/index_admin.php" title="index_admin">back-office</a></li>' ;
-  echo ' <li><a href ="/php/mysteres.php" title="accueil">mystères</a></li>' ;
-  echo ' <li><a href ="/php/illusions.php" title="accueil">illusions</a></li>' ;
-  echo ' <li><a href ="/php/contact.php" title="contact">Contact</a></li>' ;
-  echo "<h3>liens externes</h3>";
-  echo ' <li><a href ="http://positivr.fr/illusions-d-optique-gif/" title="22 illusions positivr">positivr</a></li>' ;
-  echo ' <li><a href ="http://www.planet.fr/monde-sciences-10-mysteres-de-la-nature-toujours-inexpliques.546655.1608.html" title="mysteres scientifiques sciences 10">10 myst</a></li>' ;
-  echo ' <li><a href ="http://soocurious.com/fr/8-cites-en-ruines-qui-restent-encore-un-mystere-pour-les-scientifiques/" title="mysteres scientifiques des cités en ruines">ruines</a></li>' ;
-}
 
-?>
 
 
 

@@ -1,22 +1,60 @@
 # Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
 RewriteBase /
-
-Options +FollowSymlinks
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^185\.28\.20\.41
+RewriteRule (.*) http://mystillus.esy.es/$1 [R=301,L]
+
+<FilesMatch "\.sql">
+
+ Order deny,allow
+
+ Deny from all
+
+</FilesMatch>
+
+
 RewriteCond %{HTTP_HOST} ^www.mystillus.esy.es$
 RewriteRule ^(.*) http://mystillus.esy.es/$1 [QSA,L,R=301]
 
+RewriteCond %{HTTP_HOST} ^www.mystillus.esy.es/index.php$
+RewriteRule ^(.*) http://mystillus.esy.es/index.php$1 [QSA,L,R=301]
 
-<Files modif_contenu.php>
+RewriteCond %{HTTP_HOST} ^www.mystillus.esy.es/php/index.php$
+RewriteRule ^(.*) http://mystillus.esy.es/php/index.php$1 [QSA,L,R=301]
+RewriteCond %{HTTP_HOST} ^www.mystillus.esy.es/php/mysteres.php$
+RewriteRule ^(.*) http://mystillus.esy.es/php/mysteres.php$1 [QSA,L,R=301]
+RewriteCond %{HTTP_HOST} ^www.mystillus.esy.es/php/lignes-nazca.php$
+RewriteRule ^(.*) http://mystillus.esy.es/php/lignes-nazca.php$1 [QSA,L,R=301]
+
+# old  31.170.165.174
+# new 185.28.20.41
+
+RewriteCond %{HTTP_HOST} ^185\.028\.020\.041
+RewriteRule (.*) http://mystillus.esy.es/$1 [R=301,L]
+
+
+########   mot de passe pour la page modifier contenu #################
+<Files modif-contenu.php>
 
 AuthUserFile "C:\xampp\htdocs\mystillus_local\pwd\.htpasswd"
 #AuthUserFile "/home/u128572442/public_html/pwd/.htpasswd"
-
 
 AuthName " Acces restreint a modif contenu"
 
 AuthType Basic
 
-require valid-user
-		
+require valid-user		
 </Files>	
+
+<Files traitement-vider-mess.php>
+
+AuthUserFile "C:\xampp\htdocs\mystillus_local\pwd\.htpasswd"
+#AuthUserFile "/home/u128572442/public_html/pwd/.htpasswd"
+
+AuthName " Acces restreint a modif contenu"
+
+AuthType Basic
+
+require valid-user		
+</Files>	
+

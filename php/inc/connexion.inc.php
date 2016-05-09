@@ -193,16 +193,17 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $resultat2=mysqli_num_rows($resultat1);  
    echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
    
-echo "<TABLE >";
-echo '<CAPTION> Résultats de la requete </CAPTION>' ;
-  while($data = mysqli_fetch_assoc($resultat1)) { 
-  echo '<TR><TH>'.$data['nom'].'</TH><TD> '.$data['texte'].'</TD></TR>'; 
-  } 
-echo "</TABLE> ";
-
+  ?> <TABLE ><CAPTION> Résultats de la requete </CAPTION>
+  <?php 
+  while($data = mysqli_fetch_assoc($resultat1)) {  ?>
+   <TR><TH> <?php echo $data['nom'] ; ?> </TH><TD> <?php echo $data['texte'] ; ?> </TD></TR>
+   <?php }  ?>
+ </TABLE>
+ 
+  <?php
   // on ferme la connexion à mysql 
   mysqli_close($con); 
-}
+  }
 
 
 // -------------- fonction 5 ------- extrait donnees dans un fichier .csv ---------------------------
@@ -240,7 +241,7 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  ;
 
   $resultat2=mysqli_num_rows($resultat1);  
-   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+   echo "nombre de lignes trouvees: " . $resultat2 . "<br/>";
    
    // Les lignes du tableau
 
@@ -248,8 +249,9 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
  //$lignes[] = array('Candice', 'Swanepoel');
 
 // Paramétrage de l'écriture du futur fichier CSV
-$chemin = './inc/csv/extract.csv';
-$delimiteur = ','; // Pour une tabulation, utiliser $delimiteur = "t";
+$date = date("Y-m-d-h-i-s");
+$chemin = '../csv/extract.csv';
+$delimiteur = ';'; // Pour une tabulation, utiliser $delimiteur = "t";
 
 // Création du fichier csv (le fichier est vide pour le moment)
 $fichier_csv = fopen($chemin, 'w+');
@@ -264,11 +266,14 @@ fprintf($fichier_csv, chr(0xEF).chr(0xBB).chr(0xBF));
 	// les valeurs présentes dans chaque ligne seront séparées par $delimiteur
 
   //while ($donnees = @mysqli_fetch_row($resultat1)) {
+	  
   while ($donnees = @mysqli_fetch_assoc($resultat1)) {
-  foreach ($donnees as $don) {fputcsv($fichier_csv, $donnees, $delimiteur); } 	
+   //foreach ($donnees as $don) {fputcsv($fichier_csv, $donnees, $delimiteur); } 
+   {fputcsv($fichier_csv, $donnees, $delimiteur); } 
   }
+     
   
-// fermeture du fichier csv
+// fermeture du fichier csv 
   fclose($fichier_csv);
 
   // on ferme la connexion à mysql 
@@ -314,7 +319,7 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
 echo "<TABLE >";
 echo '<CAPTION> Résultats de la requete </CAPTION>' ;
   while($data = mysqli_fetch_assoc($resultat1)) { 
-  echo '<TR><TH>'.$data['titre'].'</TH><TD> '.$data['contenu'].'</TD></TR>'; 
+  echo '<TR><TH>'.$data['titre'].'</TH><TD> ' . ($data['contenu']). '</TD></TR>'; 
   } 
 echo "</TABLE> ";
 
@@ -429,7 +434,160 @@ echo $out;
 exit;
 }
 
+// ---------- fonction 8 ---------- affiche id et titre des articles dans un select ------------------
+
+function AffIdTitreSelect($requete) { 
+    /* Declaration des variables de connexion a la BDD  */
+	
+if ( $_SERVER['HTTP_HOST'] == 'localhost' ) { 
+  $serveur=$_SERVER['HTTP_HOST'] ;
+  $loginserveur='root' ;
+  $mdpserveur='' ;
+  $nombdd='u128572442_myst' ;
+} 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u128572442_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u128572442_myst' ;
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u353141068_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u353141068_myst' ;
+  }
+  
+  /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
+  $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
+  or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
+  $con->set_charset('utf8');
+  mysqli_select_db($con,$nombdd) 
+  or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
+  
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
+  $resultat2=mysqli_num_rows($resultat1);  
+   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+   
+  // boucle for pour afficher les titres en base 
+  while($data = mysqli_fetch_assoc($resultat1)) { 
+  //echo '<TR><TH>'.$data['id'].'</TH><TD> ' .htmlentities ($data['titre']). '</TD></TR>'; 
+  echo '<option value='.$data['id'].'>'.htmlentities ($data['titre']).'</option>'; 
+  ?>   
+		
+  <?php } 
+
+  //<option value="1">lignes de Nazca</option>
+
+  // on ferme la connexion à mysql 
+  mysqli_close($con); 
+}
+
+
+// ---------- fonction 9 ---------- affiche best login le plus de modifs dans tableau PAGE WEB------------------
+
+function AffBestLoginTAB($requete) { 
+    /* Declaration des variables de connexion a la BDD  */
+	
+if ( $_SERVER['HTTP_HOST'] == 'localhost' ) { 
+  $serveur=$_SERVER['HTTP_HOST'] ;
+  $loginserveur='root' ;
+  $mdpserveur='' ;
+  $nombdd='u128572442_myst' ;
+} 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u128572442_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u128572442_myst' ;
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u353141068_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u353141068_myst' ;
+  }
+  
+  /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
+  $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
+  or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
+  $con->set_charset('utf8');
+  mysqli_select_db($con,$nombdd) 
+  or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
+  
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
+  $resultat2=mysqli_num_rows($resultat1);  
+   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+   
+echo "<TABLE >";
+echo '<CAPTION> Résultats de la requete </CAPTION>' ;
+  while($data = mysqli_fetch_assoc($resultat1)) { 
+  echo '<TR> <TH> id_user </TH> <TH> login </TH> <TH> nb_modifs </TH> </TR>'; 
+  echo ' <TD> ' . ($data['id_user']). '</TD><TD> ' . ($data['login']). '</TD> <TD> ' . ($data['nombre_modifs']). '</TD>'; 
+  
+  } 
+echo "</TABLE> ";
+
+  // on ferme la connexion à mysql 
+  mysqli_close($con); 
+}
+
+
+// ---------- fonction 10 ---------- affiche liste login somme modifs dans tableau PAGE WEB------------------
+
+function AffListLoginModifTAB($requete) { 
+    /* Declaration des variables de connexion a la BDD  */
+	
+if ( $_SERVER['HTTP_HOST'] == 'localhost' ) { 
+  $serveur=$_SERVER['HTTP_HOST'] ;
+  $loginserveur='root' ;
+  $mdpserveur='' ;
+  $nombdd='u128572442_myst' ;
+} 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u128572442_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u128572442_myst' ;
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u353141068_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u353141068_myst' ;
+  }
+  
+  /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
+  $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
+  or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
+  $con->set_charset('utf8');
+  mysqli_select_db($con,$nombdd) 
+  or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
+  
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
+  $resultat2=mysqli_num_rows($resultat1);  
+   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+   
+echo "<TABLE >";
+echo '<CAPTION> Résultats de la requete </CAPTION>' ;
+  echo '<TR> <TH> id_user </TH> <TH> login </TH> <TH> nb_modifs </TH> </TR>'; 
+
+  while($data = mysqli_fetch_assoc($resultat1)) { 
+  //echo '<TR><TH>'.$data['titre'].'</TH><TD> ' . ($data['contenu']). '</TD></TR>'; 
+  
+  echo ' <TR><TD> ' . ($data['id_user']). '</TD><TD> ' . ($data['login']). '</TD> <TD> ' . ($data['nombre_modifs']). '</TD></TR>'; 
+  } 
+echo "</TABLE> ";
+
+  // on ferme la connexion à mysql 
+  mysqli_close($con); 
+}
+
  ?> 
+ 
  
  
  

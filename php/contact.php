@@ -1,33 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif] -->
-<title> MYSTERES ET ILLUSIONS - FORMULAIRE DE CONTACT</title>
- <meta charset="utf-8"/>
- <meta name="AUTHOR" content="Franck M. Cnam">
- <meta name="Description" content="site scientifique sur des mysteres ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales" />	
- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
- <link rel="stylesheet" href ="../css/standard.css"/>
- <link rel="stylesheet" href ="../css/mobile.css"/>
- <link rel="shortcut icon" href="../img/favicon.ico" />
+<?php include ("./inc/head.inc.php"); headinclude ("MYSTILLUS - CONTACT", "site scientifique sur les mystères scientifiques et illusions d'optique"); 
+?>
 </head>
 	
 <body>
+<?php include_once("inc/analyticstracking.inc.php") ; ?>
   
 <div id="conteneur">
 
 <header>  
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("form_contact"); 
+ include ("./inc/header.inc.php"); headerinclude ("contact"); 
 ?>
- <img src="../img/img-form.png" id="imageenhaut"  >	
+ <img src="../img/img-form.png" id="imageenhaut" alt="mystillus - contact" >	
 
 </header>
 
 <div id="block-user-login" >
-<h1>Espace Membre</h1>
 <?php  
  include ("./inc/userco.inc.php");
  ?>
@@ -42,50 +34,50 @@
 
 <nav>
 <!-- menu navigation pc -->
- <ul id="menu">
  <?php  
   include ("./inc/menu.inc.php"); 
   ?>
- </ul>
 <!-- menu navigation mobile -->
-  <ul id="navigationMenu">
  <?php  
   include ("./inc/menu-mobile.inc.php"); 
   ?>
-  </ul>
 </nav>
 
 <section>
+<article>
 	 <fieldset>
       <legend>Formulaire de contact</legend>
-      <form name="formulaire" method="GET"  id="mc-form" action="./traitement.php" onSubmit ="return verifForm(this);" >
+      <form name="formulaire" method="GET"  id="mc-form" action="./traitement-contact.php" onSubmit ="return verifForm(this);" >
         <label>Veuillez indiquer le sujet de votre demande:</label></br>
         <input type="radio" name="sujet" id="sujet" value="contact" checked>contact<br>
         <input type="radio" name="sujet" value="information">information<br>
         <input type="radio" name="sujet" value="amelioration">amélioration</br>
-        <p>Nom (*) <input  type="text" name="nom" id="nom" onblur="NomAvecLettres(this)"  maxlength="50" required placeholder="pas d'espaces svp"/></p>
-        <p>Message (*) <textarea  name="message" id="message" rows="5" cols="20" placeholder="votre message, pas de caractères spéciaux" required onblur="MessSansCaractAnormaux(this);" /></textarea></p>
-        <p>Mail (*) <input type="email" name="email" id="email" onblur="BonFormatMail(this)" maxlength="50" required placeholder="ex : exemple@domaine.fr "/></p>
-       	<p>Tel <input  type="tel" name="tel" id="tel" maxlength="10"  placeholder="que des chiffres "/></p>
+        <p>Nom (*) <input  type="text" name="nom" id="nom" onblur="NomAvecLettres(this)" maxlength="10" required placeholder="pas de chiffres svp"/></p>
+        <p>Message (*) <textarea  name="message" id="message" onblur="MessSansCaractAnormaux(this);" maxlength="200" rows="5" cols="20" placeholder="votre message, pas de caractères spéciaux" required /></textarea></p>
+        <p>Mail (*) <input type="email" name="email" id="email" onblur="BonFormatMail(this)" maxlength="30" required placeholder="ex : exemple@domaine.fr "/></p>
+       	<p>Tel <input  type="tel" name="tel" id="tel" maxlength="10" onblur="TelSansLettres(this)"  placeholder="que des chiffres "/></p>
 		<input id="envoi" name="envoi" type="submit"  value="Envoyer"   /></br>	
         <input id="reset" name="reset" type="reset" value="Réinitialiser"/>
 		</br>
-        </form>
-		</br>
+      </form>
+	  </br>
         	 <div id="carte_js"></div>
      </fieldset>
+	 </article>
 </section>
+
 
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("form_contact"); 
+ include ("./inc/footer.inc.php");  footerinclude ("contact"); 
 ?>
 </footer>
 
 
 </div>
-  <!-- <script src="../jvs/verif_form.js"></script> -->
+  <script src="../jvs/verif_form.js"></script> 
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
   <script src="../jvs/map.js" type="text/javascript"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>
