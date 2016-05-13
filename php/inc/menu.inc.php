@@ -17,28 +17,30 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' )  {
   <h3>navigation sur <?php echo $ndom ; ?> </h3> 
   <ul id="menu">
   <li><a href ="./index-connected.php" title="index"  >accueil</a></li>
-  <li><a href ="./index-admin.php" title="index_admin"  >back-office</a></li>
+  <li><a href ="./index-admin.php" title="index_admin"  >back-office SQL</a></li>
+  <li><a href ="./index-admin-pdo.php" title="index_admin"  >back-office PDO</a></li><br>
   <li><a href ="./mysteres.php"  title="mysteres"  >mystères</a></li>
   <li><a href ="./lignes-nazca.php" title="mysteres"  >lignes de Nazca</a></li>
   <li><a href ="./peintures-sw.php" title="mysteres"  >peintures SW</a></li>
-  <li><a href ="./lasbolas.php" title="mysteres"  >LasBolas</a></li>
+  <li><a href ="./lasbolas.php" title="mysteres"  >LasBolas</a></li><br>
   <li><a href ="./illusions.php" title="illusions"  >illusions</a></li>
   <li><a href ="./damier-adelson.php" title="illusions"  >damier Adel</a></li>
-  <li><a href ="./lignes-piano.php" title="illusions"  >lignes piano</a></li>
+  <li><a href ="./lignes-piano.php" title="illusions"  >lignes piano</a></li><br>
   <li><a href ="./contact.php" title="contact" >Contact</a></li>
   </ul>
   <?php } else { ?>
   <h3>navigation sur <?php echo $ndom ; ?> </h3> 
   <ul id="menu">
   <li><a href ="/php/index-connected.php" title="index"  >accueil</a></li>
-  <li><a href ="/php/index-admin.php" title="index_admin"  >back-office</a></li>
+  <li><a href ="/php/index-admin.php" title="index_admin"  >back-office SQL</a></li>
+  <li><a href ="/php/index-admin-pdo.php" title="index_admin"  >back-office PDO</a></li><br>
   <li><a href ="/php/mysteres.php"  title="mysteres"  >mystères</a></li>
   <li><a href ="/php/lignes-nazca.php" title="mysteres"  >lignes de Nazca</a></li>
   <li><a href ="/php/peintures-sw.php" title="mysteres"  >peintures SW</a></li>
-  <li><a href ="/php/lasbolas.php" title="mysteres"  >LasBolas</a></li>
+  <li><a href ="/php/lasbolas.php" title="mysteres"  >LasBolas</a></li><br>
   <li><a href ="/php/illusions.php" title="illusions"  >illusions</a></li>
   <li><a href ="/php/damier-adelson.php" title="illusions"  >damier Adel</a></li>
-  <li><a href ="/php/lignes-piano.php" title="illusions"  >lignes piano</a></li>
+  <li><a href ="/php/lignes-piano.php" title="illusions"  >lignes piano</a></li><br>
   <li><a href ="/php/contact.php" title="contact"   >Contact</a></li>
  </ul>
  <?php } ?>

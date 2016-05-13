@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS LAS BOLAS","site scientifique sur des mystères ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
+  include ("inc/head.inc.php"); headinclude ("LAS BOLAS","site scientifique sur les mystères de Las Bolas");
   ?>  
   </head>
 	
@@ -14,7 +14,7 @@
 
 <header>  
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("lasbolas"); 
+ include ("./inc/header.inc.php"); headerinclude ("las bolas"); 
  //include ("inc/banniere.inc.php"); 
 ?>
  <img src="../img/mysteres/lasbolas2.jpg" id="imageenhaut" alt="boules las bolas" >	

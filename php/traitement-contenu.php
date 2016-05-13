@@ -16,7 +16,7 @@
 
 <?php 
 /* declaration des variables */
- $requete = " SELECT  titre,contenu FROM  article " ; 
+ $requete = " SELECT  titre,contenu FROM article order by titre " ; 
  require("inc/connexion.inc.php"); AffContTAB($requete) ;
 ?>  
    

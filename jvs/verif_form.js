@@ -2,6 +2,7 @@
 
 function LoginSansInf($champ) {
   $champvaleur = $champ.value;
+   //alert(" votre login est" +$champvaleur );
   $maregex = /[\<\>]+/ ;
   if($champvaleur.match($maregex)){ 
     alert(" NOK : Pas de < ou > SVP");
@@ -21,13 +22,23 @@ function NomAvecLettres($champ) {
   } 
  //$champ.value=$champ.value.toUpperCase(); return true;
 }
+function NumQueChiffres($champ) {
+  $champvaleur = $champ.value;
+  $maregex = /[0-9]+/ ;
+  if(!$champvaleur.match($maregex)){ 
+    alert(" NOK : Que des chiffres SVP");
+    $champ.focus();
+    return false;
+  } 
+ //$champ.value=$champ.value.toUpperCase(); return true;
+}
 
 function MessSansCaractAnormaux($champ){
   $champvaleur = $champ.value;
   //$maregex = /[\<|\>|\@]+/ ;
-  $maregex = /[]+/ ;
+  $maregex = /[<>]+/ ;
   if($champvaleur.match($maregex)){ 
-    alert(" NOK : Pas de caractères spéciaux dans le message SVP");
+    alert(" NOK : Pas de balises dans le message SVP");
     $champ.focus();
     return false;
   }

@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS | lignes de Nazca | géoglyphes de Nazca", "présentation des lignes de Nazca, appelées aussi géoglyphes de Nazca, au sud du Pérou");
+  include ("inc/head.inc.php"); headinclude ("lignes de Nazca | géoglyphes de Nazca", "présentation des lignes de Nazca, appelées aussi géoglyphes de Nazca, au sud du Pérou");
   ?>  
   </head>
 	
@@ -17,7 +17,7 @@
  include ("./inc/header.inc.php"); headerinclude ("lignes nazca"); 
  //include ("inc/banniere.inc.php"); 
  ?>
- <img src="../img/mysteres/lignes2.jpg" id="imageenhaut" alt="lignes nazca" />	
+ <img src="../img/mysteres/lignes2.jpg" id="imageenhaut" alt="lignes de nazca" />	
 </header>
 
 <div id="block-user-login" >
@@ -29,7 +29,7 @@
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("lignes-nazca");
+ include ("inc/cookie.inc.php"); cookieinclude ("nazca");
 ?>
 </aside>
 
@@ -95,7 +95,7 @@
     
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("géoglyphes de nazca"); 
+ include ("./inc/footer.inc.php");  footerinclude ("lignes de nazca"); 
 ?>
 </footer>
 	

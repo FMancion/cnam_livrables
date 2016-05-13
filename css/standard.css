@@ -58,7 +58,8 @@ section{margin:2px 2% 2% 2%}
 #navigationMenu{margin-top:2%}#menu{display:none}
 header{width:95%;margin:2% 2% 2% 2%}h1{font-size:14px}h2{font-Size:12px}}
 #logo{width:4%;margin-left:2%;margin-top:2%;float:left}
-#slideshow{float:left;border-radius:20px;border:2px solid green;margin-left:2%;margin-right:2%;margin-bottom:3%;background-repeat:no-repeat;background-position:center center;width:95%;overflow:hidden;position:relative;border:2px solid gray}.vueS{width:100%;display:block;background-position:center center}
+#slideshow{float:left;border-radius:20px;border:2px solid green;margin-left:2%;margin-right:2%;margin-bottom:3%;background-repeat:no-repeat;background-position:center center;width:95%;overflow:hidden;position:relative;border:2px solid gray}
+.vueS{width:100%;display:block;background-position:center center}
 #sContent li{display:inline;left:0}#sContent{position:absolute;width:100%;top:0;left:0;margin:0;padding:0}
 @-webkit-keyframes AutoSlide{0%,15%,100%{top:0}16%,31%{top:-282px}33%,48%{top:-564px}50%,65%{top:-846px}66%,81%{top:-1128px}83%,98%{top:-1410px}}
 @-moz-keyframes AutoSlide{0%,15%,100%{top:0}16%,31%{top:-282px}33%,48%{top:-564px}50%,65%{top:-846px}66%,81%{top:-1128px}83%,98%{top:-1410px}}
@@ -142,9 +143,19 @@ background-image:linear-gradient(white,#8a0);border:3px solid #9f0}
 	vertical-align:middle;
 	height : auto ;
 }
+#avatar3 {
+	width: 15% ;
+	vertical-align:middle;
+	height : auto ;
+}
 #block-user-login h1 {
 	vertical-align:middle;		
 }
 #important {
 	background-color : grey;
 }	
+#num {
+  width:10%;
+}
+
+

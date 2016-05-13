@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS LIGNES PIANO","site scientifique sur des mystères scientifiques ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
+  include ("inc/head.inc.php"); headinclude ("LIGNES PIANO","site scientifique sur des mystères scientifiques ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
   ?>  
   </head>
 	
@@ -14,7 +14,7 @@
 
 <header>  
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("lignespiano"); 
+ include ("./inc/header.inc.php"); headerinclude ("lignes piano"); 
  //include ("inc/banniere.inc.php"); 
 ?>
  <img src="../img/illusions/lignespiano.jpg" id="imageenhaut"  alt="lignes piano">	
@@ -84,7 +84,7 @@
     
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("lignespiano"); 
+ include ("./inc/footer.inc.php");  footerinclude ("lignes piano"); 
 ?>
 </footer>
 </div>

@@ -4,7 +4,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS Damier d'Adelson","site scientifique sur des mystères ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
+  include ("inc/head.inc.php"); headinclude ("Damier d'Adelson","site scientifique sur des mystères ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
   ?>  
   </head>
 	
@@ -15,7 +15,7 @@
 
 <header>  
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("damierAdel"); 
+ include ("./inc/header.inc.php"); headerinclude ("damier Adelson"); 
  //include ("inc/banniere.inc.php"); 
 ?>
  <img src="../img/illusions/damier2.jpg" id="imageenhaut"  alt="damier adelson">	
@@ -31,7 +31,7 @@
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("damierAdel");
+ include ("inc/cookie.inc.php"); cookieinclude ("Adelson");
 ?>
 </aside>
 
@@ -88,7 +88,7 @@
 
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("damierAdel"); 
+ include ("./inc/footer.inc.php");  footerinclude ("Damier Adelson"); 
 ?>
 </footer>
 

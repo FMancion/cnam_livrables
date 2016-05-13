@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude (" ADMIN"," back office");
+  include ("inc/head.inc.php"); headinclude ("ADMIN PDO","administration en pdo");
   ?>  
   </head>
 	
@@ -47,7 +47,7 @@
 <article>
 <h1>Accueil - Outils Back-Office</h1>
 <?php
- include ("inc/affichebackoff.inc.php"); 
+ include ("inc/affichebackoff-pdo.inc.php"); 
 ?>
 </article>
 

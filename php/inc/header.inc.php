@@ -8,7 +8,7 @@
 function headerinclude ($param) { ?>
 
  <h1>BIENVENUE SUR LE SITE MYSTILLUS </h1>
- <h2> Vous êtes sur la page mystillus-<?php echo $param ; ?>  </h2>
+ <h2> Vous êtes sur la page <?php echo $param ; ?>  </h2>
  
  
  

@@ -2,7 +2,7 @@
 
 function footerinclude ($param) { ?>
 
- <h1> FIN DE PAGE SUR MYSTILLUS - <?php echo $param ;?> </h1>
+ <h1> FIN DE PAGE SUR <?php echo $param ;?> </h1>
  Copyright © Franck M. CNAM - tous droits réservés <br>
  
  <a href='./index-connected.php'>Retour à l'accueil  -</a> <a href='./legales.php'> mentions légales</a><br>

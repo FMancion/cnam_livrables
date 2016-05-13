@@ -16,7 +16,8 @@
 
 <?php 
 /* declaration des variables */
- $requete = " SELECT  nom,texte FROM  message " ; 
+ $requete = " SELECT  nom,texte FROM  message order by nom" ; 
+ 
  require("inc/connexion.inc.php"); AffMessTAB($requete) ;
 ?>     
       <p> ma requete de sélection : <br/> "<?php echo $requete; ?>" </p> 

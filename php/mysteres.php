@@ -4,7 +4,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS | MYSTERES SCIENTIFIQUES","présentation de divers mystères ou énigmes scientifiques, résolus ou non");
+  include ("inc/head.inc.php"); headinclude ("MYSTERES SCIENTIFIQUES","présentation de divers mystères ou énigmes scientifiques, résolus ou non");
   ?>  
   </head>
 	
@@ -15,7 +15,7 @@
 
 <header>  
 <?php
- include ("inc/header.inc.php"); headerinclude ("mystères");
+ include ("inc/header.inc.php"); headerinclude ("mystères scientifiques");
  //include ("inc/banniere.inc.php"); 
 ?>
  <img src="../img/mysteres/maxresdefault.jpg" id="imageenhaut" alt="mysteres scientifiques" >	
@@ -79,7 +79,7 @@
 
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("mystères"); 
+ include ("./inc/footer.inc.php");  footerinclude ("mystères scientifiques"); 
 ?>
 </footer>
 

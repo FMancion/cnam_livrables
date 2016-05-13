@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS MEMBRE","site scientifique sur des mystères scientifiques ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
+  include ("inc/head.inc.php"); headinclude ("espace MEMBRE","espace connecté");
   ?>  
   </head>
 	

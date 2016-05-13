@@ -20,6 +20,7 @@
  $message = htmlspecialchars ( $_GET['message'],ENT_QUOTES ) ;
  $email = $_GET['email'];
  $tel = $_GET['tel'];
+ $malargeur = 0 ;
 ?>
 
 <article>
@@ -88,8 +89,11 @@ $heure = date("H:i:s");
   <TR> <TH> MESSAGE SQL</TH> <TD> <?php echo htmlentities ($message) ?></TD>   </TR> 
   <TR> <TH> MAIL </TH>  <TD> <?php echo $email ?></TD>   </TR> 
   <TR> <TH> TEL </TH>  <TD> <?php echo $tel ?></TD>   </TR> 
-  <TR> <TH> LARGEUR PAGE (temps réel)</TH>  <TD>  <div id="largeurPage">0</div> pixels </TD> </TR> 
+  <TR> <TH> LARGEUR PAGE en px (temps réel)</TH> <TD id="largeurPage" > <?php echo "$malargeur"  ?> </TD> </TR> 
 </TABLE> 
+<button id="changecouleur" onClick='changeCouleur("largeurPage")'> change couleur px</button>
+<button id="remettrecouleur" onClick='remettreCouleur("largeurPage")'> reset couleur px</button>
+
 </article>
 
 <article>
@@ -106,6 +110,7 @@ $heure = date("H:i:s");
 </div>
     <script src="../jvs/afficheheure.js"></script>
     <script src="../jvs/largeurpage.js"></script>
+	<script src="../jvs/changecouleurcellule.js"></script>
     <script src="../jvs/affichermasquer.js"></script>
 </body>
 </html>

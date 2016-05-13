@@ -11,8 +11,8 @@ $ndom=$_SERVER['HTTP_HOST'] ;
 
 	
 	<h2> <-- gestion messages --></h2>
-	<a href="./traitement-mess.php"><input type="button" id="backoff" title="extraire messages dans tableau page web" value="liste des messages"/></a><br>
-    <a href="./traitement-mess-csv.php"><input type="button" id="backoff" title="extraire messages dans fichier csv" value="extraire messages format csv"/></a><br>  
+	<a href="./traitement-mess.php"><input type="button" id="backoff" title="extraire messages dans tableau page web" value="liste des messages page web"/></a><br>
+    <a href="./traitement-mess-csv.php"><input type="button" id="backoff" title="extraire messages dans fichier csv" value="liste messages format csv"/></a><br>  
 	<!-- <a href="./traitement-vider-mess.php"><input type="button" id="backoff" title="vider table messages" value="vider table messages" onClick="alert('ATTENTION VOUS ALLEZ VIDER LA TABLE DES MESSAGES !!! ')"/></a><br>  -->	
 
 	<h2> <-- gestion articles --></h2>
@@ -23,7 +23,7 @@ $ndom=$_SERVER['HTTP_HOST'] ;
 	
 	<a href="./creation-article.php"><input type="button" id="backoff" title="création d'un article" value="création article"/></a><br>
 	
-	<a href="./traitement-loginmodif.php"><input type="button" id="backoff" title="login somme modif" value="affiche total modifs par user"/></a><br>
+	<a href="./traitement-loginmodif.php"><input type="button" id="backoff" title="login somme modif" value="total modifs par user"/></a><br>
 	<a href="./traitement-bestlogin.php"><input type="button" id="backoff" title="meilleur user" value="user le + de modifs"/></a><br>
 	
 	<h2> <-- tutoriels --></h2> 
@@ -33,6 +33,7 @@ $ndom=$_SERVER['HTTP_HOST'] ;
 	<h2> <-- gestion utilisateurs --></h2> 
 	<a href="./affiche-mdp.php"><input type="button" id="backoff" title="affiche mot de passe oublié" value="mot de passe oublié ?"/></a><br>
 	<a href="./creation-user.php"><input type="button" id="backoff" title="création user" value="création user"/></a><br>
+	<a href="./traitement-liste-user.php"><input type="button" id="backoff" title="liste user" value="liste des comptes"/></a><br>
 
  
  <?php } else { ?>

@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS ILLUSIONS d'optique","site scientifique sur les mystères scientifiques et illusions d'optique ");
+  include ("inc/head.inc.php"); headinclude ("ILLUSIONS d'optique","site scientifique sur les illusions d'optique et mirages, images subliminales ");
   ?>  
   </head>
 	
@@ -13,7 +13,7 @@
 
 <header>  
 <?php   
- include ("./inc/header.inc.php"); headerinclude ("illusions"); 
+ include ("./inc/header.inc.php"); headerinclude ("illusions d'optique"); 
  //include ("inc/banniere.inc.php"); 
 ?>
  <img src="../img/illusions/robe.jpg" id="imageenhaut" alt="illusion robe">	
@@ -64,7 +64,7 @@
 	
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("accueil_illusions"); 
+ include ("./inc/footer.inc.php");  footerinclude ("illusions d'optique"); 
 ?>
 </footer>
 

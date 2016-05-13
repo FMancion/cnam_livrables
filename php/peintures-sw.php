@@ -4,7 +4,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS peintures de Stephen Wiltshire","site scientifique sur des mystères ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
+  include ("inc/head.inc.php"); headinclude ("Peintures de Stephen Wiltshire","Peintures de Stephen Wiltshire, autisme, doué, mémoire incroyable");
   ?>  
   </head>
 	
@@ -30,7 +30,7 @@
 
 <aside>
 <?php
- include ("inc/cookie.inc.php"); cookieinclude ("peinturesSW");
+ include ("inc/cookie.inc.php"); cookieinclude ("Wiltshire");
 ?>
 </aside>
 
@@ -84,7 +84,7 @@
 
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("peinturesSW"); 
+ include ("./inc/footer.inc.php");  footerinclude ("peintures Wiltshire"); 
 ?>
 </footer>
 

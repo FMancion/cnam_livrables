@@ -1,4 +1,4 @@
-
+  
 <?php
 
 // ------------ fonction 1 --- applique juste une requete dans la base -----------------------
@@ -535,7 +535,8 @@ echo "</TABLE> ";
 }
 
 
-// ---------- fonction 10 ---------- affiche liste login somme modifs dans tableau PAGE WEB------------------
+
+// ---------- fonction 10 ---------- affiche liste modifs par compte dans tableau PAGE WEB -----------------
 
 function AffListLoginModifTAB($requete) { 
     /* Declaration des variables de connexion a la BDD  */
@@ -586,7 +587,67 @@ echo "</TABLE> ";
   mysqli_close($con); 
 }
 
+// ---------- fonction 11 ---------- affiche liste comptes dans tableau PAGE WEB ------------------
+
+function AffListUserTAB($requete) { 
+    /* Declaration des variables de connexion a la BDD  */
+	
+if ( $_SERVER['HTTP_HOST'] == 'localhost' ) { 
+  $serveur=$_SERVER['HTTP_HOST'] ;
+  $loginserveur='root' ;
+  $mdpserveur='' ;
+  $nombdd='u128572442_myst' ;
+} 
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.esy.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u128572442_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u128572442_myst' ;
+  }
+  
+if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
+  $serveur='mysql.hostinger.fr' ;
+  $loginserveur='u353141068_myst' ;
+  $mdpserveur='dragon18' ;
+  $nombdd='u353141068_myst' ;
+  }
+  
+  /* CONNECTION serveur, definition du charset, connexion bdd, requete sql   */
+  $con = mysqli_connect ($serveur,$loginserveur,$mdpserveur) 
+  or die("impossible de se connecter : " .mysqli_error()) ; /* affichage error si probleme */ 
+  $con->set_charset('utf8');
+  mysqli_select_db($con,$nombdd) 
+  or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
+  
+  $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
+  $resultat2=mysqli_num_rows($resultat1);  
+   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+   
+echo "<TABLE >";
+echo '<CAPTION> Résultats de la requete </CAPTION>' ;
+    echo '<TR> <TH>= = = = = = = </TH> <TD>= = = = = = = = = = = = = = = = = = = = =</TD> </TR>'; 
+
+  while($data = mysqli_fetch_assoc($resultat1)) { 
+    echo '<TR><TH> id </TH> <TD> ' . ($data['id']). '</TD> </TR>'; 
+    echo '<TR> <TH> login </TH> <TD> ' . ($data['login']). '</TD> </TR>'; 
+    echo '<TR> <TH> password </TH> <TD> ' . ($data['password']). '</TD> </TR>'; 
+    echo '<TR> <TH> type compte </TH> <TD> ' . ($data['typecompte']). '</TD> </TR>'; 
+    echo '<TR> <TH> abonnement </TH> <TD> ' . ($data['abonnement']). '</TD> </TR>'; 
+    echo '<TR> <TH> avatar </TH> <TD>  <img src="../img/'. ($data['avatar']). ' " id="avatar3" alt="avatar" ></TD></TR> ' ; 
+    echo '<TR> <TH>= = = = = = = </TH> <TD>= = = = = = = = = = = = = = = = = = = = =</TD> </TR>'; 
+    
+  //echo '<TR><TH>'.$data['titre'].'</TH><TD> ' . ($data['contenu']). '</TD></TR>'; 
+  
+  //echo ' <TR><TD> ' . ($data['id_user']). '</TD><TD> ' . ($data['login']). '</TD> <TD> ' . ($data['nombre_modifs']). '</TD></TR>'; 
+  } 
+echo "</TABLE> ";
+
+  // on ferme la connexion à mysql 
+  mysqli_close($con); 
+}
+
  ?> 
+
  
  
  

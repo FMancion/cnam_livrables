@@ -66,14 +66,27 @@
 			<option value="user" selected>user</option>
 			<option value="admin">admin</option> 
 			</select>   <br /><br>  
+			
+		<label>avatar</label>
+			<select name="chemin" id="chemin"  onchange="AffAva(this);" >
+			<option value="tintin.png"  selected>tintin</option>			     	
+			<option value="tournesol.png"  >tournesol</option> 
+			<option value="haddock.png" >haddock</option> 
+			<option value="milou.png" >milou</option> 
+			<option value="castafiore.png" >castafiore</option> 
+			<option value="no-ava.png" >none</option> 
+			</select>   
+			<img src="../img/tintin.png" name="avatar3" id="avatar3"  alt="avatar"> <br /><br>
+			
+			
 		<label>Abonnement a la newsletter</label>
 			<select name="sujet" id="sujet">
 			<option value="non" selected>non</option>
 			<option value="oui">oui</option> 
 			</select>   <br /><br>  
  
-		<label> Lien vers votre avatar</label>
-		<input type="text" id="chemin" name="chemin" placeholder=" ex : tintin.png " > <br /><br>
+		<!-- <label> Lien vers votre avatar</label>
+		<input type="text" id="chemin" name="chemin" placeholder=" ex : tintin.png " > <br /><br> -->
         
 		<label></label>
 		<input  type="hidden" name="madate1" id="madate1" value="madate1" >
@@ -97,5 +110,6 @@
   <script src="../jvs/AfficheDateHeure2.js"></script>
   <script src="../jvs/AfficheOuMasquePassword.js"></script>
   <script src="../jvs/VerifFormulaire.js"></script>
+  <script src="../jvs/AfficheAvatar.js"></script>
 </body>
 </html>

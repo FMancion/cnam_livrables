@@ -3,7 +3,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS | creation article","site scientifique sur les mystères scientifiques et illusions d'optique");
+  include ("inc/head.inc.php"); headinclude ("MYSTILLUS | creation user","site scientifique sur les mystères scientifiques et illusions d'optique");
   ?>  
   </head>
   
@@ -14,8 +14,14 @@
 session_start () ;
 
     /* declaration des variables */
-    $madate1=$_GET['madate1'];
+  $madate1=$_GET['madate1'];
 	$sujet=$_GET['sujet'];
+	$sujetsql=$_GET['sujet'];
+  
+  switch ($sujet) {
+    case "oui":  $sujetsql ="1"; break ;
+    case "non":  $sujetsql ="0"; break ;
+}
 	$tc=$_GET['tc'];
 	/* sécurisation php avant entrée en base */
     $login= htmlspecialchars ($_GET['login'],ENT_QUOTES) ;
@@ -29,11 +35,13 @@ session_start () ;
 
 <?php 
   $requete = " INSERT INTO `user`( `login`, `password` , `typecompte`, `abonnement` , `avatar`)
-				VALUES ( '$login', '$pwd', '$tc' , '$sujet', '$chemin') " ; 
+				VALUES ( '$login', '$pwd', '$tc' , '$sujetsql', '$chemin') " ; 
  
   require("inc/connexion.inc.php"); 
   requetebdd( $requete) ;
  ?>
+ 
+
   <p> ma requete d'insert de la table article : <br/> "<?php echo $requete; ?>" </p>  
   
    
@@ -63,7 +71,7 @@ session_start () ;
     
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("creation_article"); 
+ include ("./inc/footer.inc.php");  footerinclude ("creation_user"); 
 ?>
 </footer>
 

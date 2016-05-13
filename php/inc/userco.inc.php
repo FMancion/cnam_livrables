@@ -22,7 +22,7 @@ if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
 	
 	  // On affiche un lien pour fermer notre session 
 
-	echo '<a href="./logout.php"> <input type="button" title="logout" id="connection" value="déconnection"/></a>' ;
+	echo '<a href="./logout.php"> <input type="button" title="logout" id="connection" value="logout"/></a>' ;
 
 	}
 else {

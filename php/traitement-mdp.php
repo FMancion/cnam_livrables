@@ -53,7 +53,7 @@
 
 </div>
     <script src="../jvs/afficheheure.js"></script>
-    <script  src="../jvs/largeurpage.js"></script>
+    <script src="../jvs/largeurpage.js"></script>
     <script src="../jvs/affichermasquer.js"></script>
 </body>
 </html>
