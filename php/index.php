@@ -52,7 +52,6 @@
   ?>
 </nav>
 
-
 <section>	
 <article>
  <h1>Accueil - Présentation du site</h1>
