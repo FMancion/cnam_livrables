@@ -8,6 +8,7 @@
   ?>  
   </head>
 	
+<!---- début body ---->
 <body>
 <?php include_once("inc/analyticstracking.inc.php") ; ?>
 
@@ -21,7 +22,7 @@
 ?>
 </header>
 
-<!---- début formulaire ---->
+<!----  début formulaire  ---->
 <div id="block-user-login">
 <h1>Espace Membre</h1>
   <form name="formulaire" method="GET" action="./login.php" onSubmit="return verifForm(this);" >
