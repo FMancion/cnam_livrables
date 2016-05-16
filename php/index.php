@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
 
+<!--  inc head avec 2 paramètres title et content -->
   <head>
   <?php
   include ("inc/head.inc.php"); headinclude ("MYSTILLUS | mystères et illusions","site scientifique sur des mystères ou illusions d'optique, découvrez les stéréogrammes, le phénomène des mirages et des images subliminales");
@@ -12,6 +13,7 @@
 
 <div id="conteneur">
 
+<!--  inc header avec 1 paramètres  -->
 <header>  
 <?php
  include ("inc/header.inc.php"); headerinclude ("accueil principal");
@@ -19,6 +21,7 @@
 ?>
 </header>
 
+<!--  block formulaire -->
 <div id="block-user-login">
 <h1>Espace Membre</h1>
   <form name="formulaire" method="GET" action="./login.php" onSubmit="return verifForm(this);" >
