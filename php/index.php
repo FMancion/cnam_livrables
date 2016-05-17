@@ -26,7 +26,7 @@
 <h1>Espace Membre</h1>
   <form name="formulaire" method="GET" action="./login.php" onSubmit="return verifForm(this);" >
 	<label>Login : (*)</label>
-    <input type="text" id="login" name="login" maxlength="10" placeholder=" sans < ou > " required onblur="LoginSansInf(this);" > <br /><br>
+    <input type="text" id="login" name="login" maxlength="10" placeholder=" sans < ou >" required onblur="LoginSansInf(this);" > <br /><br>
     <label>Password : (*)</label> <input type="password" id="pwd" placeholder="10 caracteres max" name="pwd" maxlength="10" required onblur="PassCorrect(this);" > <span id="erreur2"></span><br><br>
     <input id="envoi" name="connection" type="submit"  value="Envoyer" /> <span id="erreur4"></span> 
   </form>
