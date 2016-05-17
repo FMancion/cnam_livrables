@@ -1,0 +1,31 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+
+<FilesMatch "\.sql">
+
+ Order deny,allow
+
+ Deny from all
+
+</FilesMatch>
+
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.mystillus.esy.es$
+RewriteRule ^(.*) http://mystillus.esy.es/$1 [QSA,L,R=301]
+
+
+########   mot de passe pour la page modifier contenu #################
+<Files modif-contenu.php>
+
+AuthUserFile "C:\xampp\htdocs\mystillus_local\pwd\.htpasswd"
+#AuthUserFile "/home/u128572442/public_html/pwd/.htpasswd"
+
+AuthName " Acces restreint a modif contenu"
+
+AuthType Basic
+
+require valid-user		
+</Files>	
+

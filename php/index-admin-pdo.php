@@ -1,13 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
-<<<<<<< HEAD
-
-=======
->>>>>>> 5520f41f34eb35d8d4f02af811e625c00a00e1b2
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude (" ADMIN"," back office");
+  include ("inc/head.inc.php"); headinclude ("ADMIN PDO","administration en pdo");
   ?>  
   </head>
 	
@@ -16,10 +12,6 @@
   
 <div id="conteneur">
 
-<<<<<<< HEAD
-<!---- include header avec 1 paramètre ---->
-=======
->>>>>>> 5520f41f34eb35d8d4f02af811e625c00a00e1b2
 <header>  
 <?php   
   include ("./inc/header.inc.php"); headerinclude ("Accueil_admin"); 
@@ -55,7 +47,7 @@
 <article>
 <h1>Accueil - Outils Back-Office</h1>
 <?php
- include ("inc/affichebackoff.inc.php"); 
+ include ("inc/affichebackoff-pdo.inc.php"); 
 ?>
 </article>
 

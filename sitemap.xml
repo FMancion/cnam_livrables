@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url><loc>http://mystillus.esy.es/index.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/index.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/mysteres.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/illusions.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/lignes-nazca.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://mystillus.esy.es/php/peintures-sw.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://mystillus.esy.es/php/lasbolas.php/</loc><changefreq>daily</changefreq></url>
+
+<url><loc>http://mystillus.esy.es/php/damier-adelson.php/</loc><changefreq>daily</changefreq></url>
+<url><loc>http://mystillus.esy.es/php/lignes-piano.php/</loc><changefreq>daily</changefreq></url>
+</urlset>
