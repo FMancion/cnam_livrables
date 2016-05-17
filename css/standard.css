@@ -1,6 +1,5 @@
 ﻿
 /********** for pc **********/
->>>>>>> 5520f41f34eb35d8d4f02af811e625c00a00e1b2
 @media(min-width:1024px) and (max-width:2000px){
 body{background-color:black}
 article{margin:3% 18% 3% 18%}
@@ -28,7 +27,6 @@ header{width:65%;margin:2% 2% 2% 2%}
 legend{font-size:18px}}
 
 /********** for tablettes **********/
->>>>>>> 5520f41f34eb35d8d4f02af811e625c00a00e1b2
 @media(min-width:561px) and (max-width:1023px){
 body{background-color:darkgrey}
 article{margin:3% 18% 3% 18%}
@@ -48,7 +46,6 @@ aside{padding:10px 10px 10px 10px;font-size:12px;float:right;margin-top:0;margin
 section{margin:280px 2% 2% 20%}header{width:65%;margin:0 2% auto 2%}legend{font-size:16x}}
 
 /********** for mobiles **********/
->>>>>>> 5520f41f34eb35d8d4f02af811e625c00a00e1b2
 @media only screen and (max-width:560px){
 h3{display :none;}
 body{background-color:white}article{margin:3% 2% 3% 2%}footer{font-size:18px}footer a{font-size:12px}
@@ -108,7 +105,6 @@ input,textarea{border-radius:8px 8px 8px 8px}input:focus,textarea:focus{backgrou
 =======
 input,textarea{border-radius:8px 8px 8px 8px}
 input:focus,textarea:focus{background-color:#eee8aa;border-radius:8px 8px 8px 8px}
->>>>>>> 5520f41f34eb35d8d4f02af811e625c00a00e1b2
 input[type=radio],[type=submit],[type=reset]{margin:0 0 0 5%}input[type=submit],input[type=reset],input[type=impression],input[type=button]{box-shadow:1px 2px 1px #360;cursor:pointer}
 #envoi:hover,#reset:hover,#impression:hover,#backoff:hover,#connection:hover{border:3px solid #9f0;border-radius:10px 10px 10px 10px;background-image:linear-gradient(white,#9f6);box-shadow:10px 10px 10px grey;cursor:pointer}
 
