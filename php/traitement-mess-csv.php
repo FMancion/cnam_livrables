@@ -34,7 +34,7 @@
 
 </article>
 
-    
+ <!---- include footer avec 1 paramètre -->   
 <footer>
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("traitementmess_csv"); 

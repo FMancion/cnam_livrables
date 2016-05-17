@@ -191,14 +191,16 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   
   $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
   $resultat2=mysqli_num_rows($resultat1);  
-   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";  ?>
+
+   <!-- affichage du tableau résultat --> 
    
-  ?> <TABLE ><CAPTION> Résultats de la requete </CAPTION>
-  <?php 
-  while($data = mysqli_fetch_assoc($resultat1)) {  ?>
-   <TR><TH> <?php echo $data['nom'] ; ?> </TH><TD> <?php echo $data['texte'] ; ?> </TD></TR>
-   <?php }  ?>
- </TABLE>
+   <TABLE ><CAPTION> Résultats de la requete </CAPTION>
+    <?php 
+    while($data = mysqli_fetch_assoc($resultat1)) {  ?>
+    <TR><TH> <?php echo $data['nom'] ; ?> </TH><TD> <?php echo $data['texte'] ; ?> </TD></TR>
+    <?php }  ?>
+   </TABLE>
  
   <?php
   // on ferme la connexion à mysql 
@@ -272,7 +274,6 @@ fprintf($fichier_csv, chr(0xEF).chr(0xBB).chr(0xBF));
    {fputcsv($fichier_csv, $donnees, $delimiteur); } 
   }
      
-  
 // fermeture du fichier csv 
   fclose($fichier_csv);
 
@@ -314,18 +315,22 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   
   $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
   $resultat2=mysqli_num_rows($resultat1);  
-   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
+  ?>
+   nombre de lignes trouvees: <?php echo $resultat2 ?> <br />
    
-echo "<TABLE >";
-echo '<CAPTION> Résultats de la requete </CAPTION>' ;
-  while($data = mysqli_fetch_assoc($resultat1)) { 
-  echo '<TR><TH>'.$data['titre'].'</TH><TD> ' . ($data['contenu']). '</TD></TR>'; 
-  } 
-echo "</TABLE> ";
-
-  // on ferme la connexion à mysql 
-  mysqli_close($con); 
-}
+   <!-- affichage du tableau résultat --> 
+   
+   <TABLE > 
+     <CAPTION> Résultats de la requete </CAPTION>
+     <?php while($data = mysqli_fetch_assoc($resultat1)) { ?>
+     <TR><TH> <?php echo $data['titre'] ; ?> </TH><TD> <?php echo $data['contenu'] ; ?> </TD></TR>
+     <?php } ?> 
+   </TABLE>
+   
+   <?php
+   //  on ferme la connexion à mysql  
+    mysqli_close($con); 
+   } 
 
 // ---------- fonction 7 ----------extrait donnees base dans fichier csv  ------------------
 
@@ -471,10 +476,10 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
    echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
    
   // boucle for pour afficher les titres en base 
-  while($data = mysqli_fetch_assoc($resultat1)) { 
-  //echo '<TR><TH>'.$data['id'].'</TH><TD> ' .htmlentities ($data['titre']). '</TD></TR>'; 
-  echo '<option value='.$data['id'].'>'.htmlentities ($data['titre']).'</option>'; 
-  ?>   
+  
+  while($data = mysqli_fetch_assoc($resultat1)) {  ?>
+  
+  <option value= <?php echo $data['id'] ?> > <?php echo htmlentities ($data['titre']) ?> </option>   
 		
   <?php } 
 
@@ -518,18 +523,22 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
   $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
-  $resultat2=mysqli_num_rows($resultat1);  
-   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
-   
-echo "<TABLE >";
-echo '<CAPTION> Résultats de la requete </CAPTION>' ;
-  while($data = mysqli_fetch_assoc($resultat1)) { 
-  echo '<TR> <TH> id_user </TH> <TH> login </TH> <TH> nb_modifs </TH> </TR>'; 
-  echo ' <TD> ' . ($data['id_user']). '</TD><TD> ' . ($data['login']). '</TD> <TD> ' . ($data['nombre_modifs']). '</TD>'; 
+  $resultat2=mysqli_num_rows($resultat1);  ?>
   
-  } 
-echo "</TABLE> ";
-
+   nombre de lignes trouvees: <?php echo $resultat2 ;?> <br />
+   
+   <!-- affichage du tableau résultat -->
+   
+   <TABLE ><CAPTION> Résultats de la requete </CAPTION>
+     <?php while($data = mysqli_fetch_assoc($resultat1)) { ?>
+     <TR><TH> id_user </TH> <TH> login </TH> <TH> nb_modifs </TH> </TR>
+     <TD><?php echo ($data['id_user']) ; ?> </TD>
+	 <TD><?php echo ($data['login']) ;?> </TD>
+	 <TD><?php echo ($data['nombre_modifs']) ;?> </TD>
+	 <?php } ?>  
+   </TABLE> 
+   <?php 
+   
   // on ferme la connexion à mysql 
   mysqli_close($con); 
 }
@@ -569,20 +578,26 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
   $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
-  $resultat2=mysqli_num_rows($resultat1);  
-   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
-   
-echo "<TABLE >";
-echo '<CAPTION> Résultats de la requete </CAPTION>' ;
-  echo '<TR> <TH> id_user </TH> <TH> login </TH> <TH> nb_modifs </TH> </TR>'; 
-
-  while($data = mysqli_fetch_assoc($resultat1)) { 
-  //echo '<TR><TH>'.$data['titre'].'</TH><TD> ' . ($data['contenu']). '</TD></TR>'; 
+  $resultat2=mysqli_num_rows($resultat1);  ?>
   
-  echo ' <TR><TD> ' . ($data['id_user']). '</TD><TD> ' . ($data['login']). '</TD> <TD> ' . ($data['nombre_modifs']). '</TD></TR>'; 
-  } 
-echo "</TABLE> ";
-
+  <!-- affichage du tableau résultat -->
+  
+   nombre de lignes trouvees: <?php echo $resultat2 ;?> <br />
+   
+   <TABLE >
+    <CAPTION> Résultats de la requete </CAPTION>
+    <TR> <TH> id_user </TH> <TH> login </TH> <TH> nb_modifs </TH> </TR>
+    <?php 
+    while($data = mysqli_fetch_assoc($resultat1)) { ?>
+     <TR>
+	   <TD> <?php echo $data['id_user'] ;?> </TD>
+	   <TD> <?php echo $data['login'] ?> </TD>
+       <TD> <?php echo $data['nombre_modifs'] ;?> </TD>
+	 </TR>
+    <?php  } ?>  
+  </TABLE>
+  
+  <?php 
   // on ferme la connexion à mysql 
   mysqli_close($con); 
 }
@@ -620,30 +635,35 @@ if ( $_SERVER['HTTP_HOST'] == 'mystillus.hol.es' ){
   or die("impossible de selecter la base: " .mysqli_error()) ; /* affichage error si probleme */ 
   
   $resultat1 = mysqli_query($con,$requete) or die('Erreur SQL !<br>'.$requete.'<br>'.mysqli_error());  
-  $resultat2=mysqli_num_rows($resultat1);  
-   echo "nombre de lignes trouvees: " . $resultat2 . "<br />";
-   
-echo "<TABLE >";
-echo '<CAPTION> Résultats de la requete </CAPTION>' ;
-    echo '<TR> <TH>= = = = = = = </TH> <TD>= = = = = = = = = = = = = = = = = = = = =</TD> </TR>'; 
-
-  while($data = mysqli_fetch_assoc($resultat1)) { 
-    echo '<TR><TH> id </TH> <TD> ' . ($data['id']). '</TD> </TR>'; 
-    echo '<TR> <TH> login </TH> <TD> ' . ($data['login']). '</TD> </TR>'; 
-    echo '<TR> <TH> password </TH> <TD> ' . ($data['password']). '</TD> </TR>'; 
-    echo '<TR> <TH> type compte </TH> <TD> ' . ($data['typecompte']). '</TD> </TR>'; 
-    echo '<TR> <TH> abonnement </TH> <TD> ' . ($data['abonnement']). '</TD> </TR>'; 
-    echo '<TR> <TH> avatar </TH> <TD>  <img src="../img/'. ($data['avatar']). ' " id="avatar3" alt="avatar" ></TD></TR> ' ; 
-    echo '<TR> <TH>= = = = = = = </TH> <TD>= = = = = = = = = = = = = = = = = = = = =</TD> </TR>'; 
-    
-  //echo '<TR><TH>'.$data['titre'].'</TH><TD> ' . ($data['contenu']). '</TD></TR>'; 
+  $resultat2=mysqli_num_rows($resultat1);  ?>
   
-  //echo ' <TR><TD> ' . ($data['id_user']). '</TD><TD> ' . ($data['login']). '</TD> <TD> ' . ($data['nombre_modifs']). '</TD></TR>'; 
-  } 
-echo "</TABLE> ";
+   nombre de lignes trouvees: <?php echo $resultat2 ;?> <br />
+   
+   <!-- affichage du tableau résultat --> 
+   
+    <TABLE >
+      <CAPTION> Résultats de la requete </CAPTION>
+      <TR> <TH>= = = = = = = </TH> <TD>= = = = = = = = = = = = = = = = = = = = =</TD></TR>
 
+      <?php while($data = mysqli_fetch_assoc($resultat1)) { ?> 
+   
+      <TR> <TH> id </TH> <TD> <?php echo $data['id'] ;?> </TD> </TR>
+      <TR> <TH> login </TH> <TD> <?php echo $data['login'] ;?> </TD> </TR>
+      <TR> <TH> password </TH> <TD> <?php echo $data['password'] ;?> </TD> </TR>
+      <TR> <TH> type compte </TH> <TD> <?php echo $data['typecompte'] ;?> </TD> </TR>
+      <TR> <TH> abonnement </TH> <TD> <?php echo $data ['abonnement'] ;?> </TD> </TR>
+      <TR> <TH> avatar </TH> 
+		   <TD><img src="../img/<?php echo $data['avatar'] ;?> "id="avatar3" alt="avatar"></TD></TR> 
+      <TR> <TH>= = = = = = = </TH> <TD>= = = = = = = = = = = = = = = = = = = = =</TD> </TR>
+    
+    <?php } ?>  
+    </TABLE>
+	
+	<?php
+	
   // on ferme la connexion à mysql 
   mysqli_close($con); 
+  
 }
 
  ?> 

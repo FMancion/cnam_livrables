@@ -63,6 +63,7 @@
 /* declaration des variables */
  $titre="lasbolas" ;
 
+ // test si le fichier connexion a deja été appelé, si non on l'appelle
  if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) { 
    $requete= "SELECT distinct contenu FROM article WHERE titre='$titre'  "; 
    $contenu=rendvaleur($requete) ; 

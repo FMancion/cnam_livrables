@@ -12,8 +12,7 @@
  
 <?php   
 session_start () ;
-
-     ?>
+?>
 
 <article>
    <form name="formulaire" method="GET" action="./traitement-efface-user.php"  >
@@ -23,24 +22,20 @@ session_start () ;
   </form>
 
 <?php 
+  //selection pour la liste des comptes
   $requete = "select * from user order by id ; " ; 
   require("inc/connexion.inc.php"); 
   AffListUserTAB( $requete) ;
  ?>
   <p> ma requete d'insert de la table article : <br/> "<?php echo $requete; ?>" </p>  
   
-
-
-
       <h2><a href="./index-admin.php">retour vers back-office</a></h2>
 
 </article>
 
-
-    
 <footer>
 <?php   
- include ("./inc/footer.inc.php");  footerinclude ("liste_user"); 
+ include ("./inc/footer.inc.php"); footerinclude ("liste_user"); 
 ?>
 </footer>
 

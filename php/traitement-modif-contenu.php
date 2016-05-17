@@ -12,20 +12,21 @@
  
 <?php   
 session_start () ;
+
 /* declaration des variables */
  $login = $_SESSION['login'] ;
  $id_titre=$_GET['id_titre'];
- //$contenu= mysql_real_escape_string ( $_GET['contenu'] ); // affiche les balises et caract mais ne les inteprete pas
  $contenu_brut =  $_GET['contenu'] ;
+ 
+ // ****** sécurisation PHP ******
  $contenu= htmlspecialchars ( $_GET['contenu'] , ENT_QUOTES);
  $contenu2= htmlentities ( $_GET['contenu'] );
+ 
+ //$contenu= mysql_real_escape_string ( $_GET['contenu'] ); // affiche les balises et caract mais ne les inteprete pas
  //$contenu= mysqli_real_escape_string  ( string $contenu ) ; // affiche les balises et caract mais ne les inteprete pas
  //$contenu= htmlspecialchars ( $_GET['contenu'] ); // affiche en &lt;p&gt; &amp;é&quot;''(-è_ççà &lt;/p&gt 	
  //$contenu= htmlentities ( $_GET['contenu'] ); // affiche en eacute
  $date = date("Y-m-d-h-i-s");
- //$contenu = htmlspecialchars ($contenu) ;
- // securisation 
- //$contenu = mysqli_real_escape_string ($contenu) ;
 ?>
 
 <article>
@@ -57,34 +58,24 @@ session_start () ;
    <p> mon contenu modifé avec htmlspecialchars : <br/> "<?php echo $contenu; ?>" </p>
   <p> mon contenu modifié avec htmlentities : <br/> "<?php echo $contenu2; ?>" </p> -->
   
-  
-  
   <?php
   requetebdd( $requete3) ;
   requetebdd( $requete4) ;
   ?> 
    
 <h1> Votre nouveau contenu a bien été envoyé en base :</h1>
+
 <TABLE > 
-  <TR> 
- <TH> ANCIEN CONTENU </TH> 
- <TD> <?php echo $contenu_old ?> </TD> 
-  </TR> 
- <TR> 
- <TH> NOUVEAU CONTENU HTML </TH> 
- <TD>  <?php echo $contenu ; ?> </TD> 
- </TR> 
- <TR> 
- <TH> NOUVEAU CONTENU EN BASE </TH> 
- <TD>  <?php echo htmlentities ($contenu) ; ?> </TD> 
- </TR> 
+ <TR><TH> ANCIEN CONTENU </TH>  <TD> <?php echo $contenu_old ?> </TD> </TR> 
+ <TR><TH> NOUVEAU CONTENU HTML </TH>  <TD>  <?php echo $contenu ; ?> </TD></TR> 
+ <TR><TH> NOUVEAU CONTENU EN BASE </TH>  <TD>  <?php echo htmlentities ($contenu);?></TD></TR> 
 </TABLE> 
-      <h2><a href="./index-admin.php">retour vers back-office</a></h2>
+
+<h2><a href="./index-admin.php">retour vers back-office</a></h2>
 
 </article>
 
-
-    
+   <!---- include footer avec 1 paramètre --> 
 <footer>
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("modif_contenu"); 

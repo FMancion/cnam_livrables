@@ -16,6 +16,7 @@
 <?php 
 /* declaration des variables */
  $num = $_GET['num'];
+ // *** requete pour effacer une ligne user ***
  $requete = " delete from user where id=$num " ; 
  require("inc/connexion.inc.php"); requetebdd($requete) ;
 ?>  

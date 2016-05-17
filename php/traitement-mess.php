@@ -25,6 +25,7 @@
       <h2><a href="./index-admin.php">retour vers back-office</a></h2>
 </article>
     
+	<!---- include footer avec 1 paramètre -->
 <footer>
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("traitementmess"); 
@@ -36,4 +37,5 @@
     <script src="../jvs/largeurpage.js"></script>
     <script src="../jvs/affichermasquer.js"></script>
 </body>
+
 </html>

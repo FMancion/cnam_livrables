@@ -4,7 +4,7 @@
 <!---- include head avec 2 paramètres title et content  -->
   <head>
   <?php
-  include ("inc/head.inc.php"); headinclude ("MYSTILLUS TRAITEMENT MDP","site scientifique sur les mystères scientifiques et illusions d'optique");
+  include ("inc/head.inc.php"); headinclude ("TRAITEMENT MDP","site scientifique sur les mystères scientifiques et illusions d'optique");
   ?>  
   </head>
   
@@ -15,7 +15,6 @@
 /* declaration des variables */
  $tc=$_GET['tc'];
  $login=$_GET['login'];
- 
 ?>
 
 <article>
@@ -29,26 +28,26 @@
    //$pass_crypte = crypt($motdepasse ,'4q'); // On crypte le mot de passe
    $nblignes = rendnblignes ($requete) ; 
    
-   if ( $nblignes == 0 ) { 
-      echo "nb de lignes trouvées : " . $nblignes . "<br />";
-	  echo "aucun mot de passe trouvé pour le login ".$login." <br />";
-   } else { 
-     echo "nb de lignes trouvées : " . $nblignes . "<br />";
-     echo "le mot de passe de ".$login." est : " . $motdepasse . "<br />";
-	 //echo ' <p> mot de passe crypté pour unix est :<br /> ' . $pass_crypte . '</p>';
-   }
-    
-  
-?>     
+   if ( $nblignes == 0 ) { ?> 
+      nb de lignes trouvées : <?php echo $nblignes ;?> <br /> 
+	  aucun mot de passe trouvé pour le login <?php echo $login ?> <br />
+     <?php } else { ?>
+     nb de lignes trouvées : <?php echo $nblignes ;?> <br />
+     le mot de passe de <?php echo $login ;?> est : <?php echo $motdepasse ;?> <br />
+	 <!-- echo ' <p> mot de passe crypté pour unix est :<br /> ' . $pass_crypte . '</p> --> 
+    <?php } ?>
+	
       <p> ma requete est : <br/> "<?php echo $requete; ?>" </p> 
 	  <h2><a href="./index-admin.php">retour vers back-office</a></h2>
 </article>
 
-    
+  <!---- include footer avec 1 paramètre -->  
 <footer>
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("traitement MDP"); 
 ?>
+
+<!---- include footer avec 1 paramètre -->
 </footer>
 
 </div>

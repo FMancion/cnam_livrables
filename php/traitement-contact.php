@@ -13,6 +13,7 @@
  
 <?php   
 /* declaration des variables */
+// ***** sécurisation PHP *****/
  $nom = htmlspecialchars ($_GET['nom'],ENT_QUOTES);
  $nom = strtoupper($nom);
  $sujet = $_GET['sujet'];
@@ -24,6 +25,7 @@
 ?>
 
 <article>
+
 <?php
 //$requete = ' INSERT INTO "message" ("nom", "texte", "mail") VALUES ( "$nom","$message", "$email") ' ; 
 //$requete = ' INSERT INTO message("nom", "texte", "mail" ) VALUES ( "$nom" , "$message" , "$email") '; 
@@ -55,23 +57,20 @@ $regex_tel = "#^0[1-68]([-. ]?[0-9]{2}){4}$#" ;
 	//if (  (preg_match($regex_nom , $nom)) && (preg_match($regex_message , $message)) &&
 		//		(preg_match($regex_mail,$email)) && (preg_match($regex_tel,$tel))) {
 			
-	  if (isset($nom) && isset($sujet) && isset($message) && isset($email) ) {
+	if (isset($nom) && isset($sujet) && isset($message) && isset($email) ) { ?>
 	
-	  echo 'tout est valide, on peut lancer la requete en base </br>' ;
-	  $requete = " INSERT INTO `message` (`nom`, `texte`, `tel`, `mail` ) VALUES ( '$nom' , '$message' , '$tel', '$email') " ; 
-	  require("inc/connexion.inc.php"); requetebdd($requete) ;
-	  echo "<h1> Votre message a bien été envoyé en base :</h1>";
+	  tout est valide, on peut lancer la requete en base </br>
+	  <?php $requete = " INSERT INTO `message` (`nom`, `texte`, `tel`, `mail` ) VALUES ( '$nom' , '$message' , '$tel', '$email') " ; 
+	  require("inc/connexion.inc.php"); requetebdd($requete) ; ?>
+	  
+	  <h1> Votre message a bien été envoyé en base :</h1> 
+	  <?php  } else  { ?> 
+      un champ n'est pas valide, la requete sql n'est pas lancée 
+	  <body onLoad="alert(\'les valeurs du formulaire ne sont pas correctes \')">
 	
-   } else {
-    echo "un champ n'est pas valide, la requete sql n'est pas lancée ";
-	echo '<body onLoad="alert(\'les valeurs du formulaire ne sont pas correctes \')">';
-	
-	header ('location: ./contact.php');
-	exit ;
-   }
- ?>
-    <p> ma requete d'insertion : <br/> "<?php echo $requete; ?>" </p> 
-
+	  <?php header ('location: ./contact.php');  exit ;  }  ?>
+	  
+ <p> ma requete d'insertion : <br/> "<?php echo $requete; ?>" </p> 
 
 <?php
 //date_default_timezone_set('America/Montreal') ;	
@@ -91,6 +90,7 @@ $heure = date("H:i:s");
   <TR> <TH> TEL </TH>  <TD> <?php echo $tel ?></TD>   </TR> 
   <TR> <TH> LARGEUR PAGE en px (temps réel)</TH> <TD id="largeurPage" > <?php echo "$malargeur"  ?> </TD> </TR> 
 </TABLE> 
+
 <button id="changecouleur" onClick='changeCouleur("largeurPage")'> change couleur px</button>
 <button id="remettrecouleur" onClick='remettreCouleur("largeurPage")'> reset couleur px</button>
 

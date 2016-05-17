@@ -22,6 +22,7 @@ session_start () ;
 <article>
 
 <?php 
+  // requete d'insertion d'un nouvel article 
   $requete = " INSERT INTO `article`( `titre`, `contenu` , `categorie`) VALUES ( '$titre', '$contenu', '$cat' ) " ; 
  
   require("inc/connexion.inc.php"); 
@@ -31,21 +32,15 @@ session_start () ;
   
    
 <h1> Votre nouvel article a bien été envoyé en base :</h1>
+
+<!-- début affichage du tableau résultat --> 
 <TABLE > 
-  <TR> 
- <TH> CATEGORIE </TH> 
- <TD> <?php echo $cat ?> </TD> 
-  </TR> 
-  <TR> 
- <TH> TITRE </TH> 
- <TD> <?php echo $titre ?> </TD> 
-  </TR> 
- <TR> 
- <TH> CONTENU </TH> 
- <TD>  <?php echo ''.htmlspecialchars($contenu).''; ?> </TD> 
- </TR> 
+ <TR> <TH> CATEGORIE </TH>  <TD> <?php echo $cat ?> </TD> </TR> 
+ <TR> <TH> TITRE </TH> <TD> <?php echo $titre ?> </TD> </TR> 
+ <TR> <TH> CONTENU </TH>  <TD>  <?php echo htmlspecialchars($contenu); ?> </TD> </TR> 
 </TABLE> 
-      <h2><a href="./index-admin.php">retour vers back-office</a></h2>
+
+<h2><a href="./index-admin.php">retour vers back-office</a></h2>
 
 </article>
 

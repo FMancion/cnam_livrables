@@ -53,12 +53,14 @@ if ( isset($_GET['login']) && isset($_GET['pwd'])) {
 		  header ('location: ./index-connected.php');
 		  exit ;
 		}
-		if ( ($nblignesadmin < 1 ) || ($nblignesuser < 1 ) ) {
-		  // Le visiteur n'a pas été reconnu comme étant membre de notre site. 
+		if ( ($nblignesadmin < 1 ) || ($nblignesuser < 1 ) ) { ?>
+		  <!--  Le visiteur n'a pas été reconnu comme étant membre de notre site. 
 	      //On utilise alors un petit javascript lui signalant ce fait
-		  // puis on le redirige vers la page d'accueil
+		  // puis on le redirige vers la page d'accueil --> 
 		  
-		  echo '<body onLoad="alert(\'membre non reconnu en base ... \')">';
+		  <body onLoad="alert(\'membre non reconnu en base ... \')">
+		  
+		  <?php 
 		  //ob_end_flush();
 		}	
 	} else {

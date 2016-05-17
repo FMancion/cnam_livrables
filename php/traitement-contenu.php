@@ -16,6 +16,8 @@
 
 <?php 
 /* declaration des variables */
+
+ // requete de sélection du titre,contenu dans la table article 
  $requete = " SELECT  titre,contenu FROM article order by titre " ; 
  require("inc/connexion.inc.php"); AffContTAB($requete) ;
 ?>  

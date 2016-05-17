@@ -34,6 +34,7 @@ session_start () ;
 <article>
 
 <?php 
+  // insere dans la table user une nouvelle ligne 
   $requete = " INSERT INTO `user`( `login`, `password` , `typecompte`, `abonnement` , `avatar`)
 				VALUES ( '$login', '$pwd', '$tc' , '$sujetsql', '$chemin') " ; 
  
@@ -45,21 +46,17 @@ session_start () ;
   <p> ma requete d'insert de la table article : <br/> "<?php echo $requete; ?>" </p>  
   
    
-<h1> Votre nouvel utilisateur a bien été envoyé en base :</h1>
+  <h1> Votre nouvel utilisateur a bien été envoyé en base :</h1>
 
 
-      <!-- debut tableau -->
+      <!-- debut affichage tableau -->
 <TABLE > 
-  <TR>  <TH> HEURE Création</TH> <TD> <?php echo $madate1 ?> </TD> </tr>
-  <TR><TH> login </TH> <TD> <?php echo $login ?>  </TD>  </tr></TR> 
-<TR> <TH> password </TH> <TD> <?php echo $pwd ?>  </TD> </TR> 
-    <TR><TH> newsletter </TH> <TD id="sujet"> <?php echo "$sujet" ?> </TD></TR> 
-   <TR> <TH> type compte </TH> <TD id="tc"> <?php echo "$tc" ?> </TD> </TR> 
-	<TR><TH> avatar </TH> 
-	 <TD > <img id="avatar" alt="avatar" src="../img/<?php echo $chemin; ?>"/>  
-    </TD> </TR> 
-	
-  
+  <TR> <TH> HEURE Création</TH> <TD> <?php echo $madate1 ?> </TD> </tr>
+  <TR> <TH> login </TH> <TD> <?php echo $login ?>  </TD>  </tr></TR> 
+  <TR> <TH> password </TH> <TD> <?php echo $pwd ?>  </TD> </TR> 
+  <TR> <TH> newsletter </TH> <TD id="sujet"> <?php echo "$sujet" ?> </TD></TR> 
+  <TR> <TH> type compte </TH> <TD id="tc"> <?php echo "$tc" ?> </TD> </TR> 
+  <TR> <TH> avatar </TH><TD> <img id="avatar" alt="avatar" src="../img/<?php echo $chemin; ?>"/></TD></TR> 
 </TABLE> 
 
 

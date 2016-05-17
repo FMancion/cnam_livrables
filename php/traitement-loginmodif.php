@@ -17,7 +17,7 @@
 <?php 
 /* declaration des variables */
 
-/* select pour rechercher le nom du login qui a fait le plus de modifs */
+/* select pour lister les login avec leur nombre de modifs */
  
  $requete = " SELECT  id_user, login, count(*) as nombre_modifs from modifier m join user u
 				on m.id_user = u.id group by id_user " ;
@@ -33,7 +33,8 @@
 
 </article>
     
-<footer>
+<!---- include footer avec 1 paramètre -->
+<footer> 
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("traitement_loginmodifs"); 
 ?>
@@ -41,4 +42,5 @@
 
 </div>
 </body>
+
 </html>

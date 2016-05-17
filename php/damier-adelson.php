@@ -66,6 +66,7 @@
 /* declaration des variables */
  $titre="damier" ;
 
+ // test si le fichier connexion a deja été appelé, si non on l'appelle
  if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) { 
    $requete= "SELECT distinct contenu FROM article WHERE titre='$titre'  "; 
    $contenu=rendvaleur($requete) ; 
@@ -85,7 +86,7 @@
 
   </section>
 
-
+<!---- include footer avec 1 paramètre -->
 <footer>
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("Damier Adelson"); 

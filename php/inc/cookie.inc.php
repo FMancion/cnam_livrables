@@ -13,18 +13,17 @@ $heure = date("H:i");
 
  //echo "SERVEUR_HTTP_COOKIE : " . $_SERVER['HTTP_COOKIE'] . "<br/>";
 	
-if (isset($_COOKIE[$param])) {
-	echo " <p> --> Le $date à $heure <br> tiens tiens...vous revoila sur la page $param .." ; 
-   echo '	Votre cooki s\'appelle : '.$_COOKIE["$param"].' </p>' ;
+if (isset($_COOKIE[$param])) { ?>
+	<p> => Le <?php echo $date ;?> à <?php echo $heure ;?><br> tiens tiens...vous revoila sur la page <?php echo $param ;?>
+    ..Votre cooki s'appelle : <?php echo $_COOKIE["$param"] ;?> </p>
+	
+	<?php } else {
+   setcookie("$param","mys$param",(time()+$expire)); ?>
 
-} else {
-   setcookie("$param","mys$param",(time()+$expire));
-   // echo 'Votre cooki : '.$_COOKIE["$param"].' ' ;
+ 	<p> => Le <?php echo $date ;?> à <?php echo $heure;?>
+	 bienvenue chez visiteur c'est la 1ère fois sur la page <?php echo $param ;?> ...</p>	
 
- 	echo " <p> --> Le $date à $heure> bienvenue chez visiteur c'est la 1ere fois sur la page $param  ...</p>" ; 	
-   //echo 'Votre cooki : '.$_COOKIE["$param"].' ' ;
-
- }
+	 <?php  }
  
 }
 

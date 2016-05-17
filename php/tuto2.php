@@ -60,6 +60,7 @@
 	</article>
 </section>
 
+<!---- include footer avec 1 paramètre -->
 <footer>
 <?php   
  include ("./inc/footer.inc.php");  footerinclude ("tuto2-article"); 
