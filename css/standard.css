@@ -100,9 +100,6 @@ article a{color:#8a0;font-size:1.0em;text-decoration:none}
 #infobulle{color:green;font-size:14pt}fieldset{border:1px solid #14dc7f}
 legend{color:black;font-weight:bold}form{margin:2% 2% 2% 2%;background-color:#fafafa}
 label{margin-top:2%;display:block}
-<<<<<<< HEAD
-input,textarea{border-radius:8px 8px 8px 8px}input:focus,textarea:focus{background-color:#eee8aa;border-radius:8px 8px 8px 8px}
-=======
 input,textarea{border-radius:8px 8px 8px 8px}
 input:focus,textarea:focus{background-color:#eee8aa;border-radius:8px 8px 8px 8px}
 input[type=radio],[type=submit],[type=reset]{margin:0 0 0 5%}input[type=submit],input[type=reset],input[type=impression],input[type=button]{box-shadow:1px 2px 1px #360;cursor:pointer}
@@ -167,7 +164,7 @@ background-image:linear-gradient(white,#8a0);border:3px solid #9f0}
   width:10%;
   border-radius:1px 1px 1px 1px
 }
-/********* fin CSS for all **********/
+/********* fin CSS for all**********/
 
 
 
