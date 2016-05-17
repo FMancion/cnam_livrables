@@ -1,0 +1,170 @@
+﻿
+/********** for pc **********/
+@media(min-width:1024px) and (max-width:2000px){
+body{background-color:black}
+article{margin:3% 18% 3% 18%}
+footer{font-size:24px}
+footer a{font-size:18px}
+fieldset{margin:5% 5% 5% 5%}
+input[type=password],input[type=text],input[type=email]{width:50%}
+input[type=submit],input[type=reset],input[type=impression]{width:40%}
+input[type=button]{width:60%}
+#menu{padding:20px 20px 20px 20px}
+#menu a{font-size:14px}h3{margin-left:15%;font-Size:14px;width:80%}
+#conteneur{margin:2% 10% 10% 10%}
+#imageenhaut{height:250px}
+#slideshow{height:250px}.vueS{height:280px}
+#navigationMenu{display:none}
+nav{float:left;margin:0 16% 20% 2%;border:3px solid green;border-radius:20px;width:16%;background-color:black}
+aside{padding:10px 10px 10px 10px;font-size:16px;float:right;margin-top:2%;margin-right:5%;width:20%}
+#block-user-login{padding:10px 10px 10px 10px;font-size:16px;float:right;margin-top:2%;margin-right:5%;width:20%}
+#block-user-login h1{font-Size:16px}
+header h1,footer h1{font-Size:18px}
+section h1,article h1{font-size:18px}
+h2{font-Size:16px}
+section{margin:412px 2% 5% 20%}
+header{width:65%;margin:2% 2% 2% 2%}
+legend{font-size:18px}}
+
+/********** for tablettes **********/
+@media(min-width:561px) and (max-width:1023px){
+body{background-color:darkgrey}
+article{margin:3% 18% 3% 18%}
+footer{font-size:20px}
+footer a{font-size:14px}
+fieldset{margin:5% 5% 5% 5%}
+input[type=password],input[type=text],input[type=email]{width:50%}input[type=submit],input[type=reset],input[type=impression]{width:60%}input[type=button]{width:75%}
+#menu{padding:20px 16px 20px 16px}
+#menu a{font-size:10px}h3{margin-left:10%;font-Size:10px;width:100%}
+#conteneur{margin:0 3% 10% 3%}
+#imageenhaut{height:150px}
+#slideshow{height:150px}.vueS{height:280px}
+#navigationMenu{display:none}nav{float:left;margin:2% 20% 30% 2%;border:3px solid green;border-radius:20px;width:15%;background-color:black}
+aside{padding:10px 10px 10px 10px;font-size:12px;float:right;margin-top:0;margin-right:2%;width:20%}
+#block-user-login{padding:10px 10px 10px 10px;font-size:12px;float:right;margin-top:0;margin-right:2%;width:20%}
+#block-user-login h1{font-Size:12px}header h1,footer h1{font-Size:13px}section h1,article h1{font-size:14px}h2{font-Size:14px}
+section{margin:280px 2% 2% 20%}header{width:65%;margin:0 2% auto 2%}legend{font-size:16x}}
+
+/********** for mobiles **********/
+@media only screen and (max-width:560px){
+h3{display :none;}
+body{background-color:white}article{margin:3% 2% 3% 2%}footer{font-size:18px}footer a{font-size:12px}
+fieldset{width:90%;margin:1% 1% 1% 1%:}input[type=password],input[type=text],input[type=email]{width:70%}input[type=submit],input[type=reset],input[type=impression]{width:60%}
+input[type=button]{width:95%}#conteneur{margin:0 1% 1% 1%}
+#imageenhaut{height:120px}
+#slideshow{height:120px}.vueS{height:270px}
+aside{padding:2px 2px 2px 2px;font-size:12px;float:right;margin:0 8% 4% 4%;width:30%}
+#block-user-login{padding:6px 6px 6px 6px;font-size:12px;float:left;margin-top:0;margin-left:2%;width:40%}
+#block-user-login h1{font-Size:11px}header h1,footer h1{font-Size:11px}section h1,article h1{font-size:12px}
+#block-user-login legend{display:none}nav{border-radius:20px;border:2px solid green;background-image:linear-gradient(white,#8a0);margin:400px 1% 2% 2%;width:95%}
+section{margin:2px 2% 2% 2%}
+#navigationMenu{margin-top:2%}#menu{display:none}
+header{width:95%;margin:2% 2% 2% 2%}h1{font-size:14px}h2{font-Size:12px}}
+
+/********* début CSS for all**********/
+#logo{width:4%;margin-left:2%;margin-top:2%;float:left}
+#slideshow{float:left;border-radius:20px;border:2px solid green;margin-left:2%;margin-right:2%;margin-bottom:3%;background-repeat:no-repeat;background-position:center center;width:95%;overflow:hidden;position:relative;border:2px solid gray}
+.vueS{width:100%;display:block;background-position:center center}
+#sContent li{display:inline;left:0}#sContent{position:absolute;width:100%;top:0;left:0;margin:0;padding:0}
+@-webkit-keyframes AutoSlide{0%,15%,100%{top:0}16%,31%{top:-282px}33%,48%{top:-564px}50%,65%{top:-846px}66%,81%{top:-1128px}83%,98%{top:-1410px}}
+@-moz-keyframes AutoSlide{0%,15%,100%{top:0}16%,31%{top:-282px}33%,48%{top:-564px}50%,65%{top:-846px}66%,81%{top:-1128px}83%,98%{top:-1410px}}
+@keyframes AutoSlide{0%,15%,100%{top:0}16%,31%{top:-282px}33%,48%{top:-564px}50%,65%{top:-846px}66%,81%{top:-1128px}83%,98%{top:-1410px}}
+#sContent{
+	-webkit-animation-name:AutoSlide;
+	-webkit-animation-duration:10s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-moz-animation-name:AutoSlide;
+	-moz-animation-duration:10s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function:ease-in-out;
+	animation-name:AutoSlide;
+	animation-duration:10s;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-in-out}
+#imageenhaut{border-radius:20px;float:left;border:2px solid green;margin:2% 2% 2% 2%;background-repeat:no-repeat;background-position:center center;width:95%;display:block;border:2px solid gray}
+#imagearticle{float:top;border-radius:20px;border:2px solid green;margin:2% 5% 2% 5%;background-repeat:no-repeat;width:70%;border:2px solid gray}
+#flechegauche{float:left;margin:0;width:10%}
+#flechedroite{float:right;margin:0;width:10%}
+#conteneur{border:2px solid #ab4;background-image:url(../img/mysteres/lignes_nazca.jpg)}
+#menu{text-align:center}
+#menu li{background-image:white}
+#menu a{display:block;width:95%;text-decoration:none;color:black;border:3px solid #360;border-radius:10px 0 10px 0;text-align:center;font-family:verdana;font-weight:bold;background-color:white}
+#menu li a:hover{border:3px solid #9f0;border-radius:10px 0 10px 0;background-image:linear-gradient(white,#9f6)}
+#menu li a:focus{border:3px solid #9f6;border-radius:10px 0 10px 0;color:white}h1{font-family:Verdana,Arial,Geneva,sans-serif;color:#9b2;text-align:center}h2{margin-left:4%;font-family:Verdana;color:#9b2;text-align:center}h3{font-family:Verdana;color:#9b2}
+header{float:left;border-radius:20px;border:3px solid green;text-align:center;background-color:black}#block-user-login,aside{text-align:center;border-radius:20px;border:3px solid green;background-color:#fffacd}
+#block-user-login a{text-decoration:none}section{border-radius:20px;border:3px solid green;background-color:Buttonface}section p{word-wrap: break-word;text-align:justify;text-indent:1em;line-height:2.7em}article{border-radius:20px;padding:20px 20px 20px 20px;border:3px solid green;background-color:#fffacd;font-family:verdana;font-size:12px;text-align:center}
+article p:first-letter {font-size:x-large;font-weight:bold;color:##9b2;font-family:comic sans ms}
+article a{color:#8a0;font-size:1.0em;text-decoration:none}
+/* article a :hover{cursor:pointer;border-radius:10px 0 10px 0;border:3px solid #9f0} */
+#infobulle{color:green;font-size:14pt}fieldset{border:1px solid #14dc7f}
+legend{color:black;font-weight:bold}form{margin:2% 2% 2% 2%;background-color:#fafafa}
+label{margin-top:2%;display:block}
+input,textarea{border-radius:8px 8px 8px 8px}
+input:focus,textarea:focus{background-color:#eee8aa;border-radius:8px 8px 8px 8px}
+input[type=radio],[type=submit],[type=reset]{margin:0 0 0 5%}input[type=submit],input[type=reset],input[type=impression],input[type=button]{box-shadow:1px 2px 1px #360;cursor:pointer}
+#envoi:hover,#reset:hover,#impression:hover,#backoff:hover,#connection:hover{border:3px solid #9f0;border-radius:10px 10px 10px 10px;background-image:linear-gradient(white,#9f6);box-shadow:10px 10px 10px grey;cursor:pointer}
+
+
+article p {
+	word-wrap: break-word;
+	
+}
+
+table{
+  margin:10% auto 10% auto;
+  border-radius:10px 10px 10px 10px ;
+  width: 100%; /* à adapter selon vos contraintes */
+  table-layout: fixed; 
+  /*overflow: hidden; 
+  max-width: 100%; 
+  text-overflow: ellipsis; */
+  
+}
+td{
+	width :70% ;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+}
+h3{
+ word-wrap: break-word;
+}
+
+caption{font-Size:16px}th{width:20px;}td,th,tr{border:2px solid green;border-radius:4px 4px 4px 4px}
+footer{float:bottom;margin:16% 2% 2% 2%;border:3px solid green;border-radius:10px 10px 10px 10px;font-family:Arial;text-align:center;color:#360;background-image:linear-gradient(white,#8a0);max-height:auto}
+footer a{font-family:Arial;color:#360;text-decoration:none}
+footer a:hover{cursor:pointer;border-radius:10px 0 10px 0;
+background-image:linear-gradient(white,#8a0);border:3px solid #9f0}
+#carte_js{height:300px;margin-left:5%;width:90%}
+#fb-like{height:300px}
+#erreur1,#erreur2,#erreur3,#erreur4{
+  color :red ;
+}
+#avatar {
+	width: 25% ;
+	height : auto ;
+}
+#avatar2 {
+	width: 25% ;
+	vertical-align:middle;
+	height : auto ;
+}
+#avatar3 {
+	width: 15% ;
+	vertical-align:middle;
+	height : auto ;
+}
+#block-user-login h1 {
+	vertical-align:middle;		
+}
+#important {
+	background-color : grey;
+}	
+#num {
+  width:10%;
+  border-radius:1px 1px 1px 1px
+}
+/********* fin CSS for all**********/
+
+
+
