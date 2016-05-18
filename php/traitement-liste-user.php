@@ -15,11 +15,6 @@ session_start () ;
 ?>
 
 <article>
-   <form name="formulaire" method="GET" action="./traitement-efface-user.php"  >
-	<label>user numéro : (*)</label>
-    <input type="text" id="num" name="num" maxlength="5" placeholder="id user " required onblur="NumQueChiffres(this);" > <br /><br>
-    <input id="envoi" name="envoi" type="submit"  value="supprimer" />  
-  </form>
 
 <?php 
   //selection pour la liste des comptes
@@ -29,7 +24,14 @@ session_start () ;
   require("inc/connexion.inc.php"); 
   AffListUserTAB($requete, $requete3, $requete4) ;
  ?>
-  <p> ma requete de sélection de la table user : <br/> "<?php echo $requete; ?>" </p>  
+  <p> ma requete de sélection de la table user : <br/> "<?php echo $requete; ?>" </p> <br>
+    
+<h2 > Formulaire de suppression de comptes </h2>
+  <form name="formulaire" method="GET" action="./traitement-efface-user.php"  >
+	  <label>user numéro : (*)</label>
+    <input type="text" id="num" name="num" maxlength="5" placeholder="id user " required onblur="NumQueChiffres(this);" > <br /><br>
+    <input id="envoi" name="envoi" type="submit"  value="supprimer" />  
+  </form>  <br>
   
       <h2><a href="./index-admin.php">retour vers back-office</a></h2>
 

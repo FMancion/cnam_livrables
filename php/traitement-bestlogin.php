@@ -19,7 +19,7 @@
 
 /* select pour rechercher le nom du login qui a fait le plus de modifs */
  $requete = " SELECT  id_user, login, count(*) as nombre_modifs 
-				FROM user u join modifier on u.id = id_user
+				FROM user u right join modifier on u.id = id_user
 				GROUP BY id_user,login HAVING count(*) = ( SELECT MAX(nb_modifs) FROM
 				( SELECT count(*) as nb_modifs FROM modifier GROUP BY id_user ) m ) " ;
 				

@@ -19,7 +19,7 @@
 
 /* select pour lister les login avec leur nombre de modifs */
  
- $requete = " SELECT  id_user, login, count(*) as nombre_modifs from modifier m join user u
+ $requete = " SELECT  id_user, login, count(*) as nombre_modifs from modifier m left join user u
 				on m.id_user = u.id group by id_user " ;
  
  require("inc/connexion.inc.php"); AffListLoginModifTAB($requete) ;

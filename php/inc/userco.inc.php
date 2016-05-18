@@ -16,7 +16,8 @@ if (isset($_SESSION['login']) && isset($_SESSION['pwd'])) {
 	 
 	<h1> <img src="../img/	<?php echo $avatar ; ?>" id="avatar2" /> Espace Membre</h1>
 	
-	Votre login : <?php echo $login ;?>  <br>votre password : <?php echo $_SESSION['pwd'] ;?><br>
+	Votre login : <?php echo $login ;?> <br>
+  <!-- votre password : <?php echo $_SESSION['pwd'] ;?><br> -->
 	votre type de compte : <?php echo $_SESSION['typecpte'] ;?> <br><br>
 	
 	<!--  On affiche un lien pour fermer notre session -->
