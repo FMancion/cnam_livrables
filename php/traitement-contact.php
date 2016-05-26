@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="fr">
 
 <!---- include head avec 2 paramètres title et content  -->
@@ -63,7 +63,7 @@ $regex_tel = "#^0[1-68]([-. ]?[0-9]{2}){4}$#" ;
 	  <?php $requete = " INSERT INTO `message` (`nom`, `texte`, `tel`, `mail` ) VALUES ( '$nom' , '$message' , '$tel', '$email') " ; 
 	  require("inc/connexion.inc.php"); requetebdd($requete) ; ?>
 	  
-	  <h1> Votre message a bien été envoyé en base :</h1> 
+	  <h1> Votre message a bien été envoyé en base : </h1> 
 	  <?php  } else  { ?> 
       un champ n'est pas valide, la requete sql n'est pas lancée 
 	  <body onLoad="alert(\'les valeurs du formulaire ne sont pas correctes \')">
@@ -109,6 +109,7 @@ $heure = date("H:i:s");
 
 </div>
     <script src="../jvs/afficheheure.js"></script>
+    <script src="../jvs/timeout.js"></script>
     <script src="../jvs/largeurpage.js"></script>
 	<script src="../jvs/changecouleurcellule.js"></script>
     <script src="../jvs/affichermasquer.js"></script>

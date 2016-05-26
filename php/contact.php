@@ -58,8 +58,19 @@
         <p>Message (*) <textarea  name="message" id="message" onblur="MessSansCaractAnormaux(this);" maxlength="200" rows="5" cols="20" placeholder="votre message, pas de caractères spéciaux" required /></textarea></p>
         <p>Mail (*) <input type="email" name="email" id="email" onblur="BonFormatMail(this)" maxlength="30" required placeholder="ex : exemple@domaine.fr "/></p>
        	<p>Tel <input  type="tel" name="tel" id="tel" maxlength="10" onblur="TelSansLettres(this)"  placeholder="que des chiffres "/></p>
-		<input id="envoi" name="envoi" type="submit"  value="Envoyer"   /></br>	
-        <input id="reset" name="reset" type="reset" value="Réinitialiser"/>
+		<div id="wrapper">
+          <div class="rand1" id="rand1"></div>
+          <div class="plus">+</div>
+          <div class="rand2"></div>
+		  <div class="egal">=</div>
+          <input type="text" id="total" class="total"  maxlength="03" required autocomplete="off" /><br>
+		  <div class="re">Reset Captcha</div><br>
+          <!-- <input id="envoi" name="envoi" type="submit"  value="Envoyer"   />  -->
+		</div>
+		
+		<input type="submit" id="submit" value="soumettre"/>
+        <input id="reset" name="reset" type="reset" value="reset"/>
+        
 		</br>
       </form>
 	  </br>
@@ -78,8 +89,9 @@
 
 </div>
   <script src="../jvs/verif_form.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="../jvs/captcha.js "></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
   <script src="../jvs/map.js" type="text/javascript"></script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>

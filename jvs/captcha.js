@@ -20,13 +20,13 @@ $("#submit").click(function(){
 	var total1=$('#total').val();
 	if(total!=total1)
 	{
-		alert(" total incorrect !!!");
+		alert(" total incorrect ou manquant !!!");
 		randomnum();
 		return false;
 	}
 	else
 	{
-		alert("total correct !!!"); return true ;
+		// alert("total correct !!!"); return true ;
 	}
 });
 randomnum();

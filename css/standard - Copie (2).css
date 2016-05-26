@@ -164,44 +164,6 @@ background-image:linear-gradient(white,#8a0);border:3px solid #9f0}
   width:10%;
   border-radius:1px 1px 1px 1px
 }
-/*=============================== debut CAPTCHA JQUERY====================================*/
-
-.rand1, .rand2 , .total
-{
-padding: 16px;
-background-color: #ADDB4B;
-margin: 25px 0;
-float: left;
-border-radius: 49px;
-}
-#total { width : 15px;}
-.plus
-{
-padding: 16px 0;
-margin: 25px 7px;
-float: left;
-}
-.egal
-{
-padding: 16px 0;
-margin: 25px 7px;
-float: left;
-}
-.re
-{
-	padding:8px;
-	background-color:#D8A217;
-	margin:35px;
-	float:left;	cursor:pointer;
-	box-shadow: 2px 2px 2px 1px #818181;
-	-moz-box-shadow: 2px 2px 2px 1px #818181;
-	-webkit-box-shadow: 2px 2px 2px 1px #818181;
-	/* -ms-box-shadow: 2px 2px 2px 1px #818181;
-	-o-box-shadow: 2px 2px 2px 1px #818181; */
-}
-
-
-
 /********* fin CSS for all**********/
 
 
